@@ -1,7 +1,7 @@
 # DR. RISHI GURNANI
 
 **Email:** rishipgurnani@gmail.com | **>1200 academic citations** | **h-index = 9**  
-[Personal Website](https://rishigurnani.github.io/site) | [GitHub Profile](https://github.com/rishigurnani)
+[Personal Website](https://rishigurnani.github.io/) | [GitHub Profile](https://github.com/rishigurnani)
 
 ---
 
@@ -70,7 +70,7 @@
 - [Interpretable ML-based predictions in metal–organic frameworks (2020)](https://rishigurnani.files.wordpress.com/2021/05/acs.chemmater.0c04729.pdf).
 - [Machine-learning predictions of polymer properties with Polymer Genome (2020)](https://rishigurnani.files.wordpress.com/2020/11/5.0023759.pdf).  
 
-Complete publication list on my [website](https://rishigurnani.github.io/site/#publications).  
+Complete publication list on my [website](https://rishigurnani.github.io//#publications).  
 
 ---
 

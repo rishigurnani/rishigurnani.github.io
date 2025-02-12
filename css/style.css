@@ -133,6 +133,12 @@ footer p {
   }
 }
 
+.publication-list .pub-title,
+.publication-list .pub-title span,
+.publication-list .pub-title a {
+  color: #3f51b5;
+}
+
 /* Profile details in the Publications left panel */
 .profile-details {
   border-bottom: 1px solid #e0e0e0;

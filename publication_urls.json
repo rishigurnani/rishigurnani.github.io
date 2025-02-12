@@ -1,0 +1,80 @@
+{
+    "publications": [
+        {
+          "title": "Experimental characterization of the mechanical properties of 3D-printed ABS and polycarbonate parts",
+          "pdf_url": "None"
+        },
+        {
+            "title": "Machine-learning predictions of polymer properties with Polymer Genome",
+            "pdf_url": "https://rishigurnani.wordpress.com/wp-content/uploads/2020/11/5.0023759.pdf"
+        },
+        {
+            "title": "Experimental characterization of the shear properties of 3D&#8211;printed ABS and polycarbonate parts",
+            "pdf_url": "None"
+        },
+          {
+            "title": "PolyG2G: A novel machine learning algorithm applied to the generative design of polymer dielectrics",
+            "pdf_url": "https://rishigurnani.wordpress.com/wp-content/uploads/2021/08/polyg2g-a-novel-machine-learning-algorithm-applied-to-the-generative-design-of-polymer-dielectrics.pdf"
+          },
+          {
+            "title": "Interpretable machine learning-based predictions of methane uptake isotherms in metal&#8211;organic frameworks",
+            "pdf_url": "https://rishigurnani.wordpress.com/wp-content/uploads/2021/05/acs.chemmater.0c04729.pdf"
+          },
+          {
+            "title": "Polymer informatics at scale with multitask graph neural networks",
+            "pdf_url": "https://rishigurnani.wordpress.com/wp-content/uploads/2023/02/acs.chemmater.2c02991.pdf"
+          },
+          {
+            "title": "Design of functional and sustainable polymers assisted by artificial intelligence",
+            "pdf_url": "https://rishigurnani.wordpress.com/wp-content/uploads/2024/08/tran_et_al-2024-nature_reviews_materials.pdf"
+          },
+          {
+            "title": "AI-assisted discovery of high-temperature dielectrics for energy storage",
+            "pdf_url": "https://rishigurnani.wordpress.com/wp-content/uploads/2024/07/s41467-024-50413-x.pdf"
+          },
+          {
+            "title": "P. Ifju Experimental characterization of the mechanical properties of 3D printed ABS and polycarbonate parts S. Yoshida, L. Lamberti, C. Sciammarella (Eds.), Advancement of &#8230;",
+            "pdf_url": "None"
+          },
+          {
+            "title": "Effect of Fluorine in Redesigning Energy-Storage Properties of High-Temperature Dielectric Polymers",
+            "pdf_url": "https://rishigurnani.wordpress.com/wp-content/uploads/2023/10/effectoffluorineinredesigningenergy-storagepropertiesofhightemperaturedielectricpolymers.pdf"
+          },
+          {
+            "title": "Pendant Group Functionalization of Cyclic Olefin for High Temperature and High&#8208;Density Energy Storage",
+            "pdf_url": "https://rishigurnani.wordpress.com/wp-content/uploads/2024/07/advanced-materials-2024-shukla-pendant-group-functionalization-of-cyclic-olefin-for-high-temperature-and-highe28090density.pdf"
+          },
+          {
+            "title": "Gas permeability, diffusivity, and solubility in polymers: Simulation-experiment data fusion and multi-task machine learning",
+            "pdf_url": "https://rishigurnani.wordpress.com/wp-content/uploads/2024/08/phan_et_al-2024-npj_computational_materials.pdf"
+          },
+          {
+            "title": "Experimental Characterization of the Mechanical Properties of 3D-Printed ABS",
+            "pdf_url": "None"
+          },
+          {
+            "title": "Identifying High-Performance Metal&#8211;Organic Frameworks for Low-Temperature Oxygen Recovery from Helium by Computational Screening",
+            "pdf_url": "https://rishigurnani.wordpress.com/wp-content/uploads/2023/01/identifying-high-performance-metale28892organic-frameworks-for-lowtemperature-oxygen-recovery-from-helium-by-computational-screening.pdf"
+          },
+          {
+            "title": "A physics-enforced neural network to predict polymer melt viscosity",
+            "pdf_url": "https://arxiv.org/pdf/2409.05240"
+          },
+          {
+            "title": "Author Correction: Gas permeability, diffusivity, and solubility in polymers: simulation-experiment data fusion and multi-task machine learning",
+            "pdf_url": "None"
+          },
+          {
+            "title": "Polymer Composites Informatics for Flammability, Thermal, Mechanical and Electrical Property Predictions",
+            "pdf_url": "https://arxiv.org/pdf/2412.08407"
+          },
+          {
+            "title": "Polymer designs for high energy density applications with high dielectric strength and dielectric constant at high temperature",
+            "pdf_url": "None"
+          },
+          {
+            "title": "A Novel Artificial Intelligence Platform Applied to the Generative Design of Polymer Dielectrics",
+            "pdf_url": "None"
+          }
+    ]
+}

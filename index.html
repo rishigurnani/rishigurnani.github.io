@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rishi Gurnani's Website</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- AOS CSS for scroll animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Chart.js Library for the graph -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  </head>
+  <body>
+    <!-- These placeholders will be filled with our partials -->
+    <div id="navbar-placeholder"></div>
+    <div id="hero-placeholder"></div>
+    <div id="main-content-placeholder"></div>
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+    </script>
+
+    <!-- jQuery (load this before Slick) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Include Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- p5.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+    <!-- Custom Animation -->
+    <script src="js/manim-animation.js"></script>
+    <!-- Custom Script -->
+    <script src="js/script.js"></script>
+    <!-- Partial Loader -->
+    <script src="js/load-partials.js"></script>
+    <!-- Include Marked (Markdown to HTML converter) -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Include html2pdf.js (HTML to PDF converter) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <!-- Resume Conversion Script -->
+    <script src="js/convert-resume.js"></script>
+    <!-- Initialize Citation Chart and Generate Publication List -->
+    <script>
+        function initCharts() {
+          function computeHIndex(publications) {
+            let citations = publications.map(pub => pub.citations);
+            citations.sort((a, b) => b - a);
+            let h = 0;
+            for (let i = 0; i < citations.length; i++) {
+              if (citations[i] >= i + 1) {
+                h = i + 1;
+              } else {
+                break;
+              }
+            }
+            return h;
+          }
+
+          function renderCitationsChart(citationsPerYear) {
+            const ctx = document.getElementById('citationsChart').getContext('2d');
+            const labels = Object.keys(citationsPerYear);
+            const data = Object.values(citationsPerYear);
+            
+            new Chart(ctx, {
+              type: 'bar',
+              data: {
+                labels: labels,
+                datasets: [{
+                  label: 'Citations per Year',
+                  data: data,
+                  backgroundColor: 'rgba(100, 200, 255, 0.2)',
+                  borderColor: 'rgba(100, 200, 255, 1)',
+                  borderWidth: 2,
+                  tension: 0.4,
+                  fill: true
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true,
+                    ticks: {
+                      stepSize: 20
+                    }
+                  }
+                }
+              }
+            });
+          }
+
+          fetch('google_scholar.json')
+            .then(response => response.json())
+            .then(data => {
+              // Compute citation summary
+              const totalCitations = data.total_citations;
+              const hIndex = computeHIndex(data.publications);
+              document.getElementById('citation-summary').innerHTML = `
+                <tr><td>Total Citations:</td><td>${totalCitations}</td></tr>
+                <tr><td>h-index:</td><td>${hIndex}</td></tr>
+              `;
+              
+              renderCitationsChart(data.citations_per_year);
+              
+              // Populate Publications Table (left panel)
+              const pubTableBody = document.getElementById('publication-table-body');
+              pubTableBody.innerHTML = '';
+              data.publications.forEach(pub => {
+                const tr = document.createElement('tr');
+                // Wrap the title in an anchor tag; update href as needed if you have a URL.
+                tr.innerHTML = `
+                  <td class="pub-title"><a href="#">${pub.title}</a></td>
+                  <td class="pub-citations">${pub.citations}</td>
+                  <td class="pub-year">${pub.year}</td>
+                `;
+                pubTableBody.appendChild(tr);
+              });
+            })
+            .catch(error => {
+              console.error('Error loading scholar data:', error);
+              document.getElementById('citation-summary').innerHTML = `
+                <tr><td colspan="2">Citation data unavailable</td></tr>
+              `;
+            });
+        }
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  </body>
+</html>
+

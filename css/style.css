@@ -1,0 +1,332 @@
+/* css/style.css */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Navbar transition */
+.navbar {
+  transition: background-color 0.3s;
+}
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  background: url('https://source.unsplash.com/1600x900/?technology,abstract') center center/cover no-repeat;
+  position: relative;
+  color: #fff;
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Section spacing */
+section {
+  padding: 60px 0;
+}
+h2 {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Card hover effect */
+.card {
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* Footer styling */
+footer {
+  background-color: #222;
+}
+footer p {
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* New styling for the citation metrics container */
+.citation-metrics-container {
+  background-color: #f7f9fc; /* a light, neutral background */
+  border: 1px solid #d0d7e5; /* subtle border */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Add a bottom margin to the heading inside the container */
+.citation-metrics-container h4 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Optional: Increase spacing below the citation metrics container */
+.publication-list {
+  margin-top: 30px;
+}
+
+/* New Publication List Styling */
+.publication-list ol {
+  list-style: decimal inside;
+  padding-left: 0;
+}
+.pub-item {
+  padding: 12px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.pub-item:last-child {
+  border-bottom: none;
+}
+.pub-title {
+  font-size: 1.1rem;
+  color: #3f51b5;
+}
+.pub-details {
+  font-size: 0.9rem;
+  color: #555;
+}
+.pub-citations {
+  color: #ff4081;
+  font-weight: 700;
+}
+.pub-year {
+  color: #333;
+}
+.pub-authors,
+.pub-venue {
+  color: #777;
+}
+/* Style adjustments for smaller screens */
+@media (max-width: 767px) {
+  .publication-list ol {
+    padding-left: 15px; /* Increase left padding for readability */
+  }
+  .pub-title {
+    font-size: 1rem; /* Slightly reduce the title size */
+  }
+  .pub-details {
+    font-size: 0.8rem; /* Reduce the details text size */
+  }
+}
+
+/* Profile details in the Publications left panel */
+.profile-details {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.profile-info h2 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+.profile-info p {
+  margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* Publications Table */
+.publication-list table {
+  font-size: 0.9rem;
+}
+.publication-list .pub-title a {
+  color: #3f51b5;
+  text-decoration: none;
+}
+.publication-list .pub-title a:hover {
+  text-decoration: underline;
+}
+
+/* Citation Metrics Table */
+#citation-summary td {
+  border-top: none;
+  padding: 4px 8px;
+  font-size: 0.9rem;
+}
+#citation-summary tr:first-child td {
+  font-weight: bold;
+}
+
+/* Slider container styling */
+.dissertation-slider {
+  margin-top: 20px;
+}
+
+/* Each slide */
+.dissertation-slider .slide {
+  padding: 10px;
+}
+
+/* Blog slide: Ensure the video fills its container */
+.blog-hero-animation {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+  border-radius: 10px;
+}
+.blog-hero-animation .video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Optional overlay for blog slide */
+.blog-hero-animation .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Open Source Slide Styles */
+.open-source-slide {
+  position: relative;  /* Establishes a containing block for absolutely positioned children */
+  overflow: hidden;
+}
+/* Video fills the container */
+.open-source-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+/* Overlay sits on top of the video without adding height */
+.open-source-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Use flex to center the content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.35);  /* Optional: a semi-transparent overlay */
+}
+.open-source-overlay h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Dark theme background for the video page */
+#video-page {
+  background-color: #181818;
+  color: #fff;
+}
+
+/* Video overlay styling */
+.video-overlay h4,
+.video-overlay p {
+  margin: 0;
+  color: #fff;
+}
+
+/* Sidebar styling */
+.sidebar .sidebar-item h5 {
+  font-weight: 600;
+}
+
+/* Sexy Swiper Navigation */
+.sexy-swiper .swiper-button-prev,
+.sexy-swiper .swiper-button-next {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+/* Hide the default pseudo-elements */
+.sexy-swiper .swiper-button-prev::after,
+.sexy-swiper .swiper-button-next::after {
+  display: none;
+}
+
+/* Position the buttons inside the container */
+.sexy-swiper .swiper-button-prev {
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sexy-swiper .swiper-button-next {
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sexy-swiper .swiper-button-prev:hover,
+.sexy-swiper .swiper-button-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.sexy-swiper .swiper-button-prev i,
+.sexy-swiper .swiper-button-next i {
+  font-size: 1.2rem;
+}
+
+/* Sidebar Icon Styling */
+.sidebar-icon i {
+  color: #fff;
+}
+
+/* Overlay Content Styling */
+.video-overlay {
+  z-index: 5;
+  opacity: 1; /* Always visible */
+  transition: opacity 0.5s ease;
+}
+.video-player:hover .video-overlay {
+  opacity: 1;
+}

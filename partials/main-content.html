@@ -1,0 +1,212 @@
+<!-- partials/main-content.html -->
+
+<!-- About Section -->
+<section id="about" class="py-5 bg-light">
+  <div class="container" data-aos="fade-up">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img
+          src="https://rishigurnani.wordpress.com/wp-content/uploads/2020/08/group-1.jpeg"
+          alt="About"
+          class="img-fluid rounded"
+        />
+      </div>
+      <div class="col-md-6">
+        <h2>About Me</h2>
+        <p>
+          This site is a curated collection of links and projects on Machine Learning and Materials Science. I currently serve as the Director of Software Engineering & Algorithms at
+          <a href="https://www.matmerize.com/" target="_blank">Matmerize</a> and engage in innovative materials informatics research.
+        </p>
+        <p>
+          My work focuses on harnessing deep learning and computational methods to discover novel materials for energy storage and beyond.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Publications Section -->
+<section id="publications" class="py-5">
+  <div class="container" data-aos="fade-up">
+    <h2 class="mb-4">Publications</h2>
+    <div class="row">
+      <!-- Left Panel: Profile & Publications -->
+      <div class="col-md-8 left-panel">
+        <!-- Publications Table -->
+        <div class="publication-list">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Citations</th>
+                <th>Year</th>
+              </tr>
+            </thead>
+            <tbody id="publication-table-body">
+              <!-- Publication rows inserted dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- Right Panel: Citation Metrics & Chart (hidden on mobile) -->
+      <div class="col-md-4 right-panel d-none d-md-block">
+        <div class="citation-metrics-container mb-4">
+          <h4 class="mb-3">Citation Metrics</h4>
+          <table class="table table-sm" id="citation-summary">
+            <!-- Citation summary rows inserted dynamically -->
+          </table>
+        </div>
+        <div class="chart-container">
+          <canvas id="citationsChart" style="max-width: 100%; height: 300px;"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Include Swiper CSS in your head (or partial) -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- New Video Page Section (YouTube‑style) -->
+<section id="video-page" class="py-5">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Main Video Section (Left Side) -->
+      <div class="col-lg-8">
+        <div class="swiper main-video-swiper sexy-swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1: Blog Animation -->
+            <div class="swiper-slide">
+              <div class="video-player position-relative">
+                <a href="https://rishigurnani.github.io/blog/" target="_blank">
+                  <video autoplay loop muted playsinline class="w-100" style="height: 360px;"
+                    src="https://videos.pexels.com/video-files/2759484/2759484-uhd_2560_1440_30fps.mp4">
+                  </video>
+                  <!-- Overlay content restored -->
+                  <div class="video-overlay position-absolute bottom-0 start-0 p-3 overlay-content"
+                       style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                    <h4 class="mb-1">Visit Rishi's Blog</h4>
+                    <p class="mb-0">Fresh insights every week</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- Slide 2: GitHub Contributions -->
+            <div class="swiper-slide">
+              <div class="video-player position-relative">
+                <video autoplay loop muted playsinline class="w-100" style="height: 360px;"
+                  src="https://videos.pexels.com/video-files/3130284/3130284-uhd_2560_1440_30fps.mp4">
+                </video>
+                <!-- Overlay content restored -->
+                <div class="video-overlay position-absolute bottom-0 start-0 p-3 overlay-content"
+                     style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                  <h4 class="mb-1">GitHub Contributions</h4>
+                  <div id="github-stats"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 3: Dissertation Video -->
+            <div class="swiper-slide">
+              <div class="video-player position-relative">
+                <iframe src="https://www.youtube.com/embed/wRN6wVhnn7E" 
+                        title="Dissertation Video" 
+                        allowfullscreen 
+                        class="w-100" 
+                        style="height: 360px;"></iframe>
+                <!-- Overlay content restored -->
+                <div class="video-overlay position-absolute bottom-0 start-0 p-3 overlay-content"
+                     style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Swiper Pagination and Navigation -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+          <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+        </div>
+      </div>
+      
+      <!-- Sidebar (Right Side) -->
+      <div class="col-lg-4">
+        <div class="sidebar">
+          <ul class="list-unstyled">
+            <!-- Sidebar item for Slide 1 -->
+            <li class="sidebar-item d-flex align-items-center mb-3" data-slide="0" style="cursor: pointer;">
+              <div class="sidebar-icon me-2"><i class="fas fa-newspaper fa-2x"></i></div>
+              <div class="sidebar-info">
+                <h5 class="mb-1" style="font-size: 1rem;">Visit Rishi's Blog</h5>
+              </div>
+            </li>
+            <!-- Sidebar item for Slide 2 -->
+            <li class="sidebar-item d-flex align-items-center mb-3" data-slide="1" style="cursor: pointer;">
+              <div class="sidebar-icon me-2"><i class="fab fa-github fa-2x"></i></div>
+              <div class="sidebar-info">
+                <h5 class="mb-1" style="font-size: 1rem;">See Rishi's Code</h5>
+              </div>
+            </li>
+            <!-- Sidebar item for Slide 3 -->
+            <li class="sidebar-item d-flex align-items-center mb-3" data-slide="2" style="cursor: pointer;">
+              <div class="sidebar-icon me-2"><i class="fas fa-video fa-2x"></i></div>
+              <div class="sidebar-info">
+                <h5 class="mb-1" style="font-size: 1rem;">Watch Rishi's Defense</h5>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- .row -->
+  </div><!-- .container-fluid -->
+</section>
+
+<!-- News Section -->
+<section id="news" class="py-5">
+  <div class="container" data-aos="fade-up">
+    <h2 class="mb-4">News</h2>
+    <h4>2024</h4>
+    <ul>
+      <li>Earned the Georgia Tech <strong>Best Ph.D. Thesis</strong> Award from Sigma Xi.</li>
+      <li>Presented the keynote at Research, Innovation & Science for Engineered Fabrics (RISE) Conference.</li>
+    </ul>
+    <h4>2023</h4>
+    <ul>
+      <li>
+        Awarded the <strong>Graduate Student Silver Award</strong> from the Materials Research Society.
+        <a href="https://www.mse.gatech.edu/news/materials-research-society-mrs-honors-mse-graduate-students-2023-graduate-student-award" target="_blank">See story</a>.
+      </li>
+      <li>Started my full-time position at <a href="https://www.matmerize.com/" target="_blank">Matmerize</a> as Director of Software Engineering &amp; Algorithms!</li>
+      <li>The Georgia Tech Office of Licensing released an <a href="https://licensing.research.gatech.edu/technology/ai-designed-high-energy-density-high-temperature-polymers" target="_blank">invention summary</a> for record-setting high-temperature polymer dielectrics discovered in the course of my thesis.</li>
+      <li>Successfully defended my PhD dissertation.</li>
+      <li>My <a href="https://rishigurnani.wordpress.com/wp-content/uploads/2023/02/acs.chemmater.2c02991.pdf" target="_blank">polyGNN</a> paper <a href="https://news.gatech.edu/news/2023/07/18/revolutionary-artificial-intelligence-algorithm-learns-chemical-language-and" target="_blank">receives some press</a>, along with the <a href="https://news.gatech.edu/news/2023/07/18/revolutionary-artificial-intelligence-algorithm-learns-chemical-language-and" target="_blank">PolyBERT</a> paper published by <a href="https://kuenneth.dev/" target="_blank">Chris Kuenneth</a> and <a href="https://ramprasad.mse.gatech.edu/dr-ramprasad/" target="_blank">Rampi Ramprasad</a>.</li>
+    </ul>
+    <h4>2022</h4>
+    <ul>
+      <li>Won the Gold Medal for best presentation at the 2nd International Forum in Energy &amp; Informatics.</li>
+      <li>Won the Best Talk at the 8th Annual Georgia Tech Student Polymer Network Symposium.</li>
+      <li>Rishi successfully defends his PhD proposal!</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container" data-aos="fade-up">
+    <h2 class="mb-4">Contact</h2>
+    <p>Get in touch with me:</p>
+    <ul class="list-unstyled">
+      <li><strong>Email:</strong> rgurnani96 [at] gatech.edu</li>
+      <li>
+        <strong>GitHub:</strong>
+        <a href="https://github.com/rishigurnani" target="_blank">github.com/rishigurnani</a>
+      </li>
+      <li>
+        <strong>LinkedIn:</strong>
+        <a href="https://www.linkedin.com/in/rishi-gurnani/" target="_blank">linkedin.com/in/rishi-gurnani/</a>
+      </li>
+      <li>
+        <strong>ORCiD:</strong>
+        <a href="https://orcid.org/0000-0002-2744-2234" target="_blank">0000-0002-2744-2234</a>
+      </li>
+    </ul>
+  </div>
+</section>

@@ -38,7 +38,7 @@
 - **Expert in:**  
   - `Physics-informed ML`, `Graph Neural Networks`, `Cheminformatics`, `(Un)supervised Learning`, `Dimensionality Reduction`, `Clustering`, `Regression`, `Classification`.  
 - **Deep knowledge of:**  
-  - `RDKit`, `PyTorch`, `SymPy`, `Numpy`, `Pandas`, `Scikit-learn`, `Selenium`, `Playwright`, `BS4`, `Flask`, `D3`, `SQL`, `PyTest`, `Cypress`, `Vitest`, `Full Stack Development`.
+  - `RDKit`, `PyTorch`, `SymPy`, `Numpy`, `Pandas`, `Scikit-learn`, `Selenium`, `Playwright`, `BS4`, `Flask`, `D3`, `SQL`, `PyTest`, `Cypress`, `Vitest`, `Full Stack Development`, `GitHub Actions`, `CI/CD`, `pre-commit hooks`.
 
 ---
 

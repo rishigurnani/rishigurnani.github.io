@@ -22,7 +22,7 @@
 *(Additional on next page)*  
 
 1. **AI-assisted discovery of high-temperature dielectrics for energy storage** (*Nature*). [Read online](https://www.nature.com/articles/s41467-024-50413-x).  
-   - Discovered a polymer dielectric with energy density **>11x** any commercially available polymer.  
+     - Discovered a polymer dielectric with energy density **>11x** any commercially available polymer.  
 2. **Design of functional and sustainable polymers assisted by artificial intelligence** (*Nature*). [Read online](https://www.nature.com/articles/s41578-024-00708-8).  
 3. **polyGNN: Multitask graph neural networks for polymer informatics** (2023). [Read online](https://pubs.acs.org/doi/full/10.1021/acs.chemmater.2c02991).  
 
@@ -36,9 +36,9 @@
 - Oversee the development of an **enterprise ML software** (~2000 commits, ~100k lines of code, 5 languages) serving **>1000 users from >20 companies**.  
 - End-to-end experience with ML model development & deployment: **data-wrangling, web scraping, ML model prototyping & optimization, graphical user interface, unit testing, end-to-end testing, cloud deployment (AWS)**.  
 - **Expert in:**  
-  - `Physics-informed ML`, `Graph Neural Networks`, `Cheminformatics`, `(Un)supervised Learning`, `Dimensionality Reduction`, `Clustering`, `Regression`, `Classification`.  
+    - `Physics-informed ML`, `Graph Neural Networks`, `Cheminformatics`, `(Un)supervised Learning`, `Dimensionality Reduction`, `Clustering`, `Regression`, `Classification`.  
 - **Deep knowledge of:**  
-  - `RDKit`, `PyTorch`, `SymPy`, `Numpy`, `Pandas`, `Scikit-learn`, `Selenium`, `Playwright`, `BS4`, `Flask`, `D3`, `SQL`, `PyTest`, `Cypress`, `Vitest`, `Full Stack Development`, `GitHub Actions`, `CI/CD`, `pre-commit hooks`.
+    - `RDKit`, `PyTorch`, `SymPy`, `Numpy`, `Pandas`, `Scikit-learn`, `Selenium`, `Playwright`, `BS4`, `Flask`, `D3`, `SQL`, `PyTest`, `Cypress`, `Vitest`, `Full Stack Development`.
 
 ---
 
@@ -80,5 +80,5 @@ Complete publication list on my [website](https://rishigurnani.github.io//#publi
 2. **Debugging Neural Networks**, Hands-on Data Science & ML Training Series, nanoHUB (2021). [Watch on YouTube](https://www.youtube.com/watch?v=TFWYoZoezrY).  
 3. **polyG2G: ML Algorithm for Generative Design of Polymer Dielectrics**, 2nd Energy & Informatics International Forum, Tokyo Institute of Technology (2022). [View online](https://rishigurnani.files.wordpress.com/2022/12/polyg2g_eiif.pdf).  
 4. **Polymer Genome: Accelerating Materials Discovery via Data-Driven Approaches**,  
-   - *76th Annual Meeting & Exhibition, Society of Tribologists and Lubrication Engineers (2022)*. [View online](https://rishigurnani.files.wordpress.com/2022/06/stle_ml_seminar.pdf).  
-   - *Materials Machine Learning Symposium, Sandia National Laboratory (2021)*. [View online](https://rishigurnani.files.wordpress.com/2021/10/sandia_ml_seminar_0521_v2.pdf).
+     - *76th Annual Meeting & Exhibition, Society of Tribologists and Lubrication Engineers (2022)*. [View online](https://rishigurnani.files.wordpress.com/2022/06/stle_ml_seminar.pdf).  
+     - *Materials Machine Learning Symposium, Sandia National Laboratory (2021)*. [View online](https://rishigurnani.files.wordpress.com/2021/10/sandia_ml_seminar_0521_v2.pdf).

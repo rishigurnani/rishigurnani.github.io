@@ -69,6 +69,14 @@
     <!-- Initialize Citation Chart and Generate Publication List -->
     <script>
       function initCharts() {
+        // Check if the citation summary element exists
+        const citationSummaryEl = document.getElementById('citation-summary');
+        if (!citationSummaryEl) {
+          console.error("Element with ID 'citation-summary' not found. Make sure the partial containing it has loaded.");
+          return; // Exit the function if the element doesn't exist.
+        }
+      
+        // Helper function to compute the h-index.
         function computeHIndex(publications) {
           let citations = publications.map(pub => pub.citations);
           citations.sort((a, b) => b - a);
@@ -82,7 +90,8 @@
           }
           return h;
         }
-
+      
+        // Helper function to render the citations chart.
         function renderCitationsChart(citationsPerYear) {
           const ctx = document.getElementById('citationsChart').getContext('2d');
           const labels = Object.keys(citationsPerYear);
@@ -106,15 +115,13 @@
               scales: {
                 y: {
                   beginAtZero: true,
-                  ticks: {
-                    stepSize: 20
-                  }
+                  ticks: { stepSize: 20 }
                 }
               }
             }
           });
         }
-
+      
         // Fetch both JSON files in parallel.
         Promise.all([
           fetch('google_scholar.json').then(response => response.json()),
@@ -124,7 +131,7 @@
           // Update citation metrics.
           const totalCitations = scholarData.total_citations;
           const hIndex = computeHIndex(scholarData.publications);
-          document.getElementById('citation-summary').innerHTML = `
+          citationSummaryEl.innerHTML = `
             <tr><td>Total Citations:</td><td>${totalCitations}</td></tr>
             <tr><td>h-index:</td><td>${hIndex}</td></tr>
           `;
@@ -137,23 +144,22 @@
             pdfLinks[pub.title.trim()] = pub.pdf_url;
           });
           
-          // Populate the publications table with a collapsible section.
+          // Populate the publications table with a toggle button for extra publications.
           const pubTableBody = document.getElementById('publication-table-body');
           pubTableBody.innerHTML = '';
+          
+          // Split publications into visible and hidden groups.
           const visibleCount = 6;
           const visiblePubs = scholarData.publications.slice(0, visibleCount);
           const hiddenPubs = scholarData.publications.slice(visibleCount);
           
-          // Helper function to create a publication row.
+          // Helper function to create a table row for a publication.
           function createPublicationRow(pub) {
             const tr = document.createElement('tr');
             const pdfUrl = pdfLinks[pub.title.trim()];
-            let titleHtml = '';
-            if (pdfUrl && pdfUrl !== "None") {
-              titleHtml = `<a href="${pdfUrl}" target="_blank">${pub.title}</a>`;
-            } else {
-              titleHtml = `<span>${pub.title}</span>`;
-            }
+            const titleHtml = pdfUrl && pdfUrl !== "None"
+              ? `<a href="${pdfUrl}" target="_blank">${pub.title}</a>`
+              : `<span>${pub.title}</span>`;
             tr.innerHTML = `
               <td class="pub-title">${titleHtml}</td>
               <td class="pub-citations">${pub.citations}</td>
@@ -162,32 +168,32 @@
             return tr;
           }
           
-          // Append visible publications.
+          // Append visible publication rows.
           visiblePubs.forEach(pub => {
             pubTableBody.appendChild(createPublicationRow(pub));
           });
           
-          // If there are hidden publications, create a separate tbody and toggle button.
+          // If there are hidden publications, add them in a hidden tbody and a toggle button.
           if (hiddenPubs.length > 0) {
+            // Get the table element.
+            const table = pubTableBody.closest('table');
+            
+            // Create a hidden tbody for the extra publications.
             const hiddenTbody = document.createElement('tbody');
             hiddenTbody.id = 'hidden-publications';
             hiddenTbody.style.display = 'none';
             hiddenPubs.forEach(pub => {
               hiddenTbody.appendChild(createPublicationRow(pub));
             });
-            
-            // Append the hidden tbody to the table.
-            const table = pubTableBody.closest('table');
             table.appendChild(hiddenTbody);
             
-            // Create a toggle button to show/hide the hidden publications.
+            // Create a container and toggle button.
             const toggleContainer = document.createElement('div');
             toggleContainer.className = 'text-center mt-2';
             const toggleButton = document.createElement('button');
             toggleButton.className = 'btn btn-secondary';
-            // Set initial button text to "Show N more", where N is the number of hidden rows.
             toggleButton.textContent = `Show ${hiddenPubs.length} more`;
-            toggleButton.addEventListener('click', function(){
+            toggleButton.addEventListener('click', function() {
               if (hiddenTbody.style.display === 'none') {
                 hiddenTbody.style.display = 'table-row-group';
                 toggleButton.textContent = 'Show Less';
@@ -202,110 +208,27 @@
         })
         .catch(error => {
           console.error('Error loading scholar or publication URL data:', error);
-          document.getElementById('citation-summary').innerHTML = `
+          citationSummaryEl.innerHTML = `
             <tr><td colspan="2">Citation data unavailable</td></tr>
           `;
         });
       }
-
-        function computeHIndex(publications) {
-          let citations = publications.map(pub => pub.citations);
-          citations.sort((a, b) => b - a);
-          let h = 0;
-          for (let i = 0; i < citations.length; i++) {
-            if (citations[i] >= i + 1) {
-              h = i + 1;
-            } else {
-              break;
-            }
-          }
-          return h;
-        }
-    
-        function renderCitationsChart(citationsPerYear) {
-          const ctx = document.getElementById('citationsChart').getContext('2d');
-          const labels = Object.keys(citationsPerYear);
-          const data = Object.values(citationsPerYear);
-          
-          new Chart(ctx, {
-            type: 'bar',
-            data: {
-              labels: labels,
-              datasets: [{
-                label: 'Citations per Year',
-                data: data,
-                backgroundColor: 'rgba(100, 200, 255, 0.2)',
-                borderColor: 'rgba(100, 200, 255, 1)',
-                borderWidth: 2,
-                tension: 0.4,
-                fill: true
-              }]
-            },
-            options: {
-              scales: {
-                y: {
-                  beginAtZero: true,
-                  ticks: {
-                    stepSize: 20
-                  }
-                }
-              }
-            }
-          });
-        }
-    
-        // Fetch both JSON files in parallel.
-        Promise.all([
-          fetch('google_scholar.json').then(response => response.json()),
-          fetch('publication_urls.json').then(response => response.json())
-        ])
-        .then(([scholarData, urlData]) => {
-          // Update citation metrics.
-          const totalCitations = scholarData.total_citations;
-          const hIndex = computeHIndex(scholarData.publications);
-          document.getElementById('citation-summary').innerHTML = `
-            <tr><td>Total Citations:</td><td>${totalCitations}</td></tr>
-            <tr><td>h-index:</td><td>${hIndex}</td></tr>
-          `;
-          
-          renderCitationsChart(scholarData.citations_per_year);
-          
-          // Build a lookup map for publication titles to PDF URLs.
-          const pdfLinks = {};
-          urlData.publications.forEach(pub => {
-            pdfLinks[pub.title.trim()] = pub.pdf_url;
-          });
-          
-          // Populate the publications table.
-          const pubTableBody = document.getElementById('publication-table-body');
-          pubTableBody.innerHTML = '';
-          scholarData.publications.forEach(pub => {
-            const tr = document.createElement('tr');
-            // Match the publication title (trimmed) to get the PDF link.
-            const pdfUrl = pdfLinks[pub.title.trim()];
-            let titleHtml = '';
-            if (pdfUrl && pdfUrl !== "None") {
-              // If a valid URL exists, wrap the title in an anchor.
-              titleHtml = `<a href="${pdfUrl}" target="_blank">${pub.title}</a>`;
-            } else {
-              // Otherwise, wrap it in a span. Both will be styled blue via CSS.
-              titleHtml = `<span>${pub.title}</span>`;
-            }
-            tr.innerHTML = `
-              <td class="pub-title">${titleHtml}</td>
-              <td class="pub-citations">${pub.citations}</td>
-              <td class="pub-year">${pub.year}</td>
-            `;
-            pubTableBody.appendChild(tr);
-          });
-        })
-        .catch(error => {
-          console.error('Error loading scholar or publication URL data:', error);
-          document.getElementById('citation-summary').innerHTML = `
-            <tr><td colspan="2">Citation data unavailable</td></tr>
-          `;
-        });
     </script>
+    
+    <!-- Add this just before the closing </body> tag in index.html -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        // Delay slightly to ensure all content has rendered
+        setTimeout(() => {
+          // Trigger a reflow by dispatching a resize event
+          window.dispatchEvent(new Event('resize'));
+          // If you're using AOS for animations, refresh it
+          if (typeof AOS !== 'undefined') {
+            AOS.refresh();
+          }
+        }, 200);
+      });
+    </script>   
   </body>
 </html>
 

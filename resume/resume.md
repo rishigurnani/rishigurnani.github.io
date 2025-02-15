@@ -57,8 +57,8 @@
 ## OPEN-SOURCE CODE  
 
 1. **polyGNN**: Code for training fast and accurate structure-property models.  
-   - Used for the companion paper *polyGNN: Multitask graph neural networks for polymer informatics*.  
-   - [View on GitHub](https://github.com/Ramprasad-Group/polygnn) (**35 stars** ⭐).  
+    - Used for the companion paper *polyGNN: Multitask graph neural networks for polymer informatics*.  
+    - [View on GitHub](https://github.com/Ramprasad-Group/polygnn) (**35 stars** ⭐).  
 
 ---
 

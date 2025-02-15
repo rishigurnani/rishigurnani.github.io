@@ -336,3 +336,16 @@ footer p {
 .video-player:hover .video-overlay {
   opacity: 1;
 }
+
+/* Sidebar Subtitle Styling for Dark Mode */
+.sidebar .sidebar-info small {
+  color: #ddd; /* light gray for visibility */
+  font-size: 0.8rem;
+  font-style: italic;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  transition: color 0.3s ease;
+}
+
+.sidebar .sidebar-item:hover .sidebar-info small {
+  color: #fff; /* brighten on hover */
+}

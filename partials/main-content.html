@@ -83,7 +83,6 @@
                   <video autoplay loop muted playsinline class="w-100" style="height: 360px;"
                     src="https://videos.pexels.com/video-files/2759484/2759484-uhd_2560_1440_30fps.mp4">
                   </video>
-                  <!-- Overlay content restored -->
                   <div class="video-overlay position-absolute bottom-0 start-0 p-3 overlay-content"
                        style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
                     <h4 class="mb-1">Visit Rishi's Blog</h4>
@@ -92,13 +91,13 @@
                 </a>
               </div>
             </div>
+        
             <!-- Slide 2: GitHub Contributions -->
             <div class="swiper-slide">
               <div class="video-player position-relative">
                 <video autoplay loop muted playsinline class="w-100" style="height: 360px;"
                   src="https://videos.pexels.com/video-files/3130284/3130284-uhd_2560_1440_30fps.mp4">
                 </video>
-                <!-- Overlay content restored -->
                 <div class="video-overlay position-absolute bottom-0 start-0 p-3 overlay-content"
                      style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
                   <h4 class="mb-1">GitHub Contributions</h4>
@@ -106,6 +105,7 @@
                 </div>
               </div>
             </div>
+        
             <!-- Slide 3: Dissertation Video -->
             <div class="swiper-slide">
               <div class="video-player position-relative">
@@ -114,47 +114,118 @@
                         allowfullscreen 
                         class="w-100" 
                         style="height: 360px;"></iframe>
-                <!-- Overlay content restored -->
                 <div class="video-overlay position-absolute bottom-0 start-0 p-3 overlay-content"
                      style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
                 </div>
               </div>
             </div>
+        
+            <!-- Slide 4: Materials World Podcast -->
+            <div class="swiper-slide">
+              <div class="video-player position-relative">
+                <iframe src="https://www.youtube.com/embed/srLJlK67tXc" 
+                        title="Materials World Podcast" 
+                        allowfullscreen 
+                        class="w-100" 
+                        style="height: 360px;"></iframe>
+              </div>
+            </div>
+        
+            <!-- Slide 5: nanoHub Talk -->
+            <div class="swiper-slide">
+              <div class="video-player position-relative">
+                <a href="https://www.youtube.com/watch?v=TFWYoZoezrY" target="_blank">
+                  <img src="https://raw.githubusercontent.com/rishigurnani/rishigurnani.github.io/main/img/Debugging.png" 
+                      alt="nanoHub Talk - Debugging Neural Networks" 
+                      class="w-100" 
+                      style="height: 360px; object-fit: cover; border-radius: 10px;">
+                </a>
+              </div>
+            </div>
+        
+            <!-- Slide 6: MRS Future Leaders -->
+            <div class="swiper-slide">
+              <div class="video-player position-relative">
+                <iframe src="https://www.youtube.com/embed/eeqzsGVvr9w" 
+                        title="MRS Future Leaders Talk" 
+                        allowfullscreen 
+                        class="w-100" 
+                        style="height: 360px;"></iframe>
+              </div>
+            </div>
+        
           </div>
           <!-- Swiper Pagination and Navigation -->
           <div class="swiper-pagination"></div>
           <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
           <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
-        </div>
+        </div>        
       </div>
       
       <!-- Sidebar (Right Side) -->
-      <div class="col-lg-4">
+      <div class="col-lg-4 d-none d-lg-block">
         <div class="sidebar">
           <ul class="list-unstyled">
-            <!-- Sidebar item for Slide 1 -->
+            <!-- Slide 0: Blog Animation -->
             <li class="sidebar-item d-flex align-items-center mb-3" data-slide="0" style="cursor: pointer;">
-              <div class="sidebar-icon me-2"><i class="fas fa-newspaper fa-2x"></i></div>
+              <div class="sidebar-icon me-2">
+                <i class="fas fa-newspaper fa-2x"></i>
+              </div>
               <div class="sidebar-info">
                 <h5 class="mb-1" style="font-size: 1rem;">Read Rishi's Blog</h5>
               </div>
             </li>
-            <!-- Sidebar item for Slide 2 -->
+            <!-- Slide 1: GitHub Contributions -->
             <li class="sidebar-item d-flex align-items-center mb-3" data-slide="1" style="cursor: pointer;">
-              <div class="sidebar-icon me-2"><i class="fab fa-github fa-2x"></i></div>
+              <div class="sidebar-icon me-2">
+                <i class="fab fa-github fa-2x"></i>
+              </div>
               <div class="sidebar-info">
                 <h5 class="mb-1" style="font-size: 1rem;">Hack Rishi's Code</h5>
               </div>
             </li>
-            <!-- Sidebar item for Slide 3 -->
+            <!-- Slide 2: Dissertation Video (YouTube) -->
             <li class="sidebar-item d-flex align-items-center mb-3" data-slide="2" style="cursor: pointer;">
-              <div class="sidebar-icon me-2"><i class="fas fa-video fa-2x"></i></div>
+              <div class="sidebar-icon me-2">
+                <i class="fas fa-video fa-2x"></i>
+              </div>
               <div class="sidebar-info">
-                <h5 class="mb-1" style="font-size: 1rem;">Watch Rishi's Defense</h5>
+                <h5 class="mb-1" style="font-size: 1rem;">Watch Rishi</h5>
+                <small>Defend his Ph.D. thesis</small>
+              </div>
+            </li>
+            <!-- Slide 3: Materials World Podcast (YouTube) -->
+            <li class="sidebar-item d-flex align-items-center mb-3" data-slide="3" style="cursor: pointer;">
+              <div class="sidebar-icon me-2">
+                <i class="fas fa-video fa-2x"></i>
+              </div>
+              <div class="sidebar-info">
+                <h5 class="mb-1" style="font-size: 1rem;">Watch Rishi</h5>
+                <small>Share his career journey</small>
+              </div>
+            </li>
+            <!-- Slide 4: nanoHub Talk (YouTube) -->
+            <li class="sidebar-item d-flex align-items-center mb-3" data-slide="4" style="cursor: pointer;">
+              <div class="sidebar-icon me-2">
+                <i class="fas fa-video fa-2x"></i>
+              </div>
+              <div class="sidebar-info">
+                <h5 class="mb-1" style="font-size: 1rem;">Watch Rishi</h5>
+                <small>Lecture about neural networks</small>
+              </div>
+            </li>
+            <!-- Slide 5: MRS Future Leaders (YouTube) -->
+            <li class="sidebar-item d-flex align-items-center mb-3" data-slide="5" style="cursor: pointer;">
+              <div class="sidebar-icon me-2">
+                <i class="fas fa-video fa-2x"></i>
+              </div>
+              <div class="sidebar-info">
+                <h5 class="mb-1" style="font-size: 1rem;">Watch Rishi</h5>
+                <small>Discuss his MRS Award</small>
               </div>
             </li>
           </ul>
-        </div>
+        </div>              
       </div>
     </div><!-- .row -->
   </div><!-- .container-fluid -->

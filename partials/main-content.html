@@ -1,28 +1,77 @@
 <!-- partials/main-content.html -->
 
+<!-- partials/main-content.html -->
+
 <!-- About Section -->
 <section id="about" class="py-5 bg-light">
   <div class="container" data-aos="fade-up">
-    <div class="row align-items-center">
-      <div class="col-md-6">
-        <img
-          src="https://rishigurnani.wordpress.com/wp-content/uploads/2020/08/group-1.jpeg"
-          alt="About"
-          class="img-fluid rounded"
-        />
+    <div class="row">
+      <!-- Left Column: Image -->
+      <div class="col-md-6 text-center">
+        <img src="https://rishigurnani.wordpress.com/wp-content/uploads/2020/08/group-1.jpeg" 
+             alt="About" class="img-fluid rounded">
       </div>
+      
+      <!-- Right Column: Text and Counters -->
       <div class="col-md-6">
-        <h2>About Me</h2>
-        <p>
-          This site is a curated collection of links and projects on Machine Learning and Materials Science. I currently serve as the Director of Software Engineering & Algorithms at
-          <a href="https://www.matmerize.com/" target="_blank">Matmerize</a> and engage in innovative materials informatics research.
-        </p>
-        <p>
-          My work focuses on harnessing deep learning and computational methods to discover novel materials for energy storage and beyond.
-        </p>
-      </div>
-    </div>
-  </div>
+        <!-- Text Section (at the top) -->
+        <div class="text-section text-center mb-4">
+          <h2>About Me</h2>
+          <p>This site is a curated collection of links and projects on Machine Learning and Materials Science.
+            I currently am designing new beverages at Coca-Cola using AI for biochemistry.
+          </p>
+        </div>
+        
+        <!-- 2x2 Counter Grid -->
+        <div class="counter-grid">
+          <!-- LinkedIn Counter -->
+          <div class="counter">
+            <video class="fire-video" autoplay loop muted playsinline>
+              <source src="https://videos.pexels.com/video-files/856296/856296-hd_1920_960_24fps.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="overlay">
+              <div class="number" id="linkedin-counter">0</div>
+              <div class="label">LinkedIn Followers</div>
+            </div>
+          </div>
+          <!-- YouTube Counter -->
+          <div class="counter">
+            <video class="fire-video" autoplay loop muted playsinline>
+              <source src="https://videos.pexels.com/video-files/856296/856296-hd_1920_960_24fps.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="overlay">
+              <div class="number" id="youtube-counter">0</div>
+              <div class="label">YouTube Views</div>
+            </div>
+          </div>
+          <!-- Citations Counter -->
+          <div class="counter">
+            <video class="fire-video" autoplay loop muted playsinline>
+              <source src="https://videos.pexels.com/video-files/856296/856296-hd_1920_960_24fps.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="overlay">
+              <div class="number" id="citations-counter">0</div>
+              <div class="label">Citations</div>
+            </div>
+          </div>
+          <!-- GitHub Counter -->
+          <div class="counter">
+            <video class="fire-video" autoplay loop muted playsinline>
+              <source src="https://videos.pexels.com/video-files/856296/856296-hd_1920_960_24fps.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="overlay">
+              <div class="number" id="github-counter">0</div>
+              <div class="label">GitHub Stars</div>
+            </div>
+          </div>
+        </div> <!-- .counter-grid -->
+      </div> <!-- .col-md-8 -->
+    </div> <!-- .row -->
+  </div> <!-- .container -->
 </section>
 
 <!-- Publications Section -->

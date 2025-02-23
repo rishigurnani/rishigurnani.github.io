@@ -274,6 +274,17 @@ footer p {
   color: #fff;
 }
 
+/* Overlay Content Styling - *THIS IS THE CRITICAL CHANGE* */
+.video-overlay {
+  z-index: 5;
+  opacity: 1; /* Always visible */
+  transition: opacity 0.5s ease;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); /* ADDED - For the gradient effect */
+}
+.video-player:hover .video-overlay {
+  opacity: 1;  /* Keep this for hover effect */
+}
+
 /* Sidebar styling */
 .sidebar .sidebar-item h5 {
   font-weight: 600;
@@ -326,16 +337,6 @@ footer p {
 /* Sidebar Icon Styling */
 .sidebar-icon i {
   color: #fff;
-}
-
-/* Overlay Content Styling */
-.video-overlay {
-  z-index: 5;
-  opacity: 1; /* Always visible */
-  transition: opacity 0.5s ease;
-}
-.video-player:hover .video-overlay {
-  opacity: 1;
 }
 
 /* Sidebar Subtitle Styling for Dark Mode */

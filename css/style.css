@@ -194,21 +194,22 @@ footer p {
   padding: 10px;
 }
 
-/* Blog slide: Ensure the video fills its container */
-.blog-hero-animation {
+/* Video slide: Maintain aspect ratio */
+.video-player {
   position: relative;
+  width: 100%; /* Make it fill the slide */
   height: 0;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (height/width) */
   overflow: hidden;
-  border-radius: 10px;
 }
-.blog-hero-animation .video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+
+.video-player iframe, .video-player video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Important: Crop or fill to maintain aspect ratio */
 }
 
 /* Optional overlay for blog slide */

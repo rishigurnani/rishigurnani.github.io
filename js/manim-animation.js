@@ -20,11 +20,12 @@ function initAnimation() {
       canvas.parent(container);
       p.angleMode(p.RADIANS);
       p.noFill();
+      p.frameRate(30); // Cap the frame rate for smoother performance
     };
 
     p.draw = function() {
       // Clear background.
-      p.background(20, 20, 30);
+      p.background(20, 20, 30, 50); // Add some transparency for trails
       // Translate to the center of the canvas.
       p.translate(p.width / 2, p.height / 2);
 

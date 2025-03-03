@@ -429,3 +429,8 @@ footer p {
   border-radius: 4px;     /* optional */
   transition: background-color 0.3s ease;
 }
+
+/* Hide dots under slider */
+.swiper-pagination {
+  display: none !important;
+}

@@ -277,6 +277,7 @@ footer p {
 /* Overlay Content Styling - *THIS IS THE CRITICAL CHANGE* */
 .video-overlay {
   z-index: 5;
+  transform: translateZ(0);
   opacity: 1; /* Always visible */
   transition: opacity 0.5s ease;
   background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); /* ADDED - For the gradient effect */

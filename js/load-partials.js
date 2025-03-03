@@ -124,15 +124,33 @@ document.addEventListener("DOMContentLoaded", function() {
           },
         });
       
-        // Attach click events to each sidebar item to jump to the corresponding slide
-        document.querySelectorAll('.sidebar-item').forEach(function(item) {
+        // Get all sidebar items
+        const sidebarItems = document.querySelectorAll('.sidebar-item');
+      
+        // 1) When a sidebar item is clicked, jump to that slide
+        sidebarItems.forEach((item) => {
           item.addEventListener('click', function() {
             var slideIndex = parseInt(this.getAttribute('data-slide'), 10);
             swiper.slideTo(slideIndex);
           });
         });
-      }
       
+        // 2) Listen for Swiper's slideChange event to highlight the active sidebar item
+        swiper.on('slideChange', function() {
+          // Remove 'active-slide' from all sidebar items
+          sidebarItems.forEach((el) => el.classList.remove('active-slide'));
+      
+          // Add 'active-slide' to the sidebar item corresponding to the current slide
+          // Use swiper.activeIndex to get the current slide index
+          const currentSlideIndex = swiper.activeIndex;
+          if (sidebarItems[currentSlideIndex]) {
+            sidebarItems[currentSlideIndex].classList.add('active-slide');
+          }
+        });
+      
+        // 3) On load, highlight the initial active slide (slide 0)
+        sidebarItems[swiper.activeIndex].classList.add('active-slide');
+      }
     }
   }   
 

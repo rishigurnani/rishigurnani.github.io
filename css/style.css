@@ -421,3 +421,11 @@ footer p {
 .label {
   font-size: 1rem;
 }
+
+/* Highlight the current slide's sidebar item */
+.sidebar-item.active-slide {
+  background-color: #444; /* or another highlight color */
+  color: #fff;
+  border-radius: 4px;     /* optional */
+  transition: background-color 0.3s ease;
+}

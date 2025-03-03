@@ -2,7 +2,8 @@
     "publications": [
         {
           "title": "Experimental characterization of the mechanical properties of 3D-printed ABS and polycarbonate parts",
-          "pdf_url": "None"
+          "pdf_url": "None",
+          "publisher_url": "https://link.springer.com/chapter/10.1007/978-3-319-41600-7_11"
         },
         {
             "title": "Machine-learning predictions of polymer properties with Polymer Genome",
@@ -10,7 +11,8 @@
         },
         {
             "title": "Experimental characterization of the shear properties of 3D&#8211;printed ABS and polycarbonate parts",
-            "pdf_url": "None"
+            "pdf_url": "None",
+            "publisher_url": "https://link.springer.com/article/10.1007/s11340-017-0343-6"
         },
           {
             "title": "PolyG2G: A novel machine learning algorithm applied to the generative design of polymer dielectrics",
@@ -34,7 +36,8 @@
           },
           {
             "title": "P. Ifju Experimental characterization of the mechanical properties of 3D printed ABS and polycarbonate parts S. Yoshida, L. Lamberti, C. Sciammarella (Eds.), Advancement of &#8230;",
-            "pdf_url": "None"
+            "pdf_url": "None",
+            "publisher_url": "https://link.springer.com/chapter/10.1007/978-3-319-41600-7_11"
           },
           {
             "title": "Effect of Fluorine in Redesigning Energy-Storage Properties of High-Temperature Dielectric Polymers",
@@ -50,7 +53,8 @@
           },
           {
             "title": "Experimental Characterization of the Mechanical Properties of 3D-Printed ABS",
-            "pdf_url": "None"
+            "pdf_url": "None",
+            "publisher_url": "https://link.springer.com/chapter/10.1007/978-3-319-41600-7_11"
           },
           {
             "title": "Identifying High-Performance Metal&#8211;Organic Frameworks for Low-Temperature Oxygen Recovery from Helium by Computational Screening",
@@ -62,7 +66,8 @@
           },
           {
             "title": "Author Correction: Gas permeability, diffusivity, and solubility in polymers: simulation-experiment data fusion and multi-task machine learning",
-            "pdf_url": "None"
+            "pdf_url": "None",
+            "gscholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C2Leh-oAAAAJ&citation_for_view=C2Leh-oAAAAJ:UebtZRa9Y70C"
           },
           {
             "title": "Polymer Composites Informatics for Flammability, Thermal, Mechanical and Electrical Property Predictions",
@@ -70,11 +75,13 @@
           },
           {
             "title": "Polymer designs for high energy density applications with high dielectric strength and dielectric constant at high temperature",
-            "pdf_url": "None"
+            "pdf_url": "None",
+            "gscholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C2Leh-oAAAAJ&citation_for_view=C2Leh-oAAAAJ:WF5omc3nYNoC"
           },
           {
             "title": "A Novel Artificial Intelligence Platform Applied to the Generative Design of Polymer Dielectrics",
-            "pdf_url": "None"
+            "pdf_url": "None",
+            "gscholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C2Leh-oAAAAJ&citation_for_view=C2Leh-oAAAAJ:zYLM7Y9cAGgC"
           }
     ]
 }

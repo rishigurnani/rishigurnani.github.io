@@ -129,8 +129,7 @@
         Promise.all([
           fetch('google_scholar.json').then(response => response.json()),
           fetch('publication_urls.json').then(response => response.json())
-        ])
-        .then(([scholarData, urlData]) => {
+        ]).then(([scholarData, urlData]) => {
           // Update citation metrics.
           const totalCitations = scholarData.total_citations;
           const hIndex = computeHIndex(scholarData.publications);
@@ -141,10 +140,16 @@
           
           renderCitationsChart(scholarData.citations_per_year);
           
-          // Build a lookup map for publication titles to PDF URLs.
-          const pdfLinks = {};
+          // Build a lookup map for publication titles to link objects.
+          // Each object will store pdf, publisher, and gscholar URLs.
+          const linkMap = {};
           urlData.publications.forEach(pub => {
-            pdfLinks[pub.title.trim()] = pub.pdf_url;
+            const title = pub.title.trim();
+            linkMap[title] = {
+              pdf: (pub.pdf_url && pub.pdf_url !== "None") ? pub.pdf_url : null,
+              publisher: (pub.publisher_url && pub.publisher_url !== "None") ? pub.publisher_url : null,
+              gscholar: (pub.gscholar_url && pub.gscholar_url !== "None") ? pub.gscholar_url : null
+            };
           });
           
           // Populate the publications table with a toggle button for extra publications.
@@ -159,10 +164,22 @@
           // Helper function to create a table row for a publication.
           function createPublicationRow(pub) {
             const tr = document.createElement('tr');
-            const pdfUrl = pdfLinks[pub.title.trim()];
-            const titleHtml = pdfUrl && pdfUrl !== "None"
-              ? `<a href="${pdfUrl}" target="_blank">${pub.title}</a>`
+            // Get the corresponding link object from the map
+            const links = linkMap[pub.title.trim()] || {};
+            // Determine which link to use by preference: PDF > Publisher > gScholar.
+            let url = null;
+            if (links.pdf) {
+              url = links.pdf;
+            } else if (links.publisher) {
+              url = links.publisher;
+            } else if (links.gscholar) {
+              url = links.gscholar;
+            }
+            // Build the title HTML: if a link exists, wrap the title in an anchor tag.
+            const titleHtml = url
+              ? `<a href="${url}" target="_blank">${pub.title}</a>`
               : `<span>${pub.title}</span>`;
+            
             tr.innerHTML = `
               <td class="pub-title">${titleHtml}</td>
               <td class="pub-citations">${pub.citations}</td>

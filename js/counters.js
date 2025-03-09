@@ -23,7 +23,7 @@ function animateCounter(element, start, end, duration) {
 // Function to update all counters from the API and JSON files
 function updateCountersFromAPI() {
   // 1. LinkedIn followers from linkedin/stats.json
-  fetch('linkedin/stats.json')
+  fetch("linkedin/stats.json")
     .then(res => res.json())
     .then(data => {
       const linkedinFollowers = data.followers;
@@ -35,11 +35,11 @@ function updateCountersFromAPI() {
     .catch(err => console.error("Error loading LinkedIn stats:", err));
 
   // 2. GitHub stars: sum stars from profile repos and add polygnn repo stars if needed
-  fetch('https://api.github.com/users/rishigurnani/repos?per_page=100')
+  fetch("https://api.github.com/users/rishigurnani/repos?per_page=100")
     .then(res => res.json())
     .then(repos => {
       // Fetch polygnn repo separately
-      fetch('https://api.github.com/repos/Ramprasad-Group/polygnn')
+      fetch("https://api.github.com/repos/Ramprasad-Group/polygnn")
         .then(res => res.json())
         .then(polygnnRepo => {
           let totalStars = repos.reduce((sum, repo) => sum + repo.stargazers_count, 0);
@@ -57,7 +57,7 @@ function updateCountersFromAPI() {
     .catch(err => console.error("Error loading GitHub repos:", err));
 
   // 3. Citations from google_scholar.json
-  fetch('google_scholar.json')
+  fetch("google_scholar.json")
     .then(res => res.json())
     .then(data => {
       const totalCitations = data.total_citations;
@@ -69,7 +69,7 @@ function updateCountersFromAPI() {
     .catch(err => console.error("Error loading Google Scholar stats:", err));
 
   // 4. YouTube views from yt/youtube-stats.json
-  fetch('yt/youtube-stats.json')
+  fetch("yt/youtube-stats.json")
     .then(res => res.json())
     .then(data => {
       const totalViews = data.total_views;

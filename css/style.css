@@ -1,7 +1,7 @@
 /* css/style.css */
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: Montserrat, sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -9,8 +9,9 @@ body {
 .navbar {
   transition: background-color 0.3s;
 }
+
 .navbar.scrolled {
-  background-color: rgba(0, 0, 0, 0.85) !important;
+  background-color: rgb(0 0 0 / 85%) !important;
 }
 
 /* Hero Section */
@@ -20,6 +21,7 @@ body {
   position: relative;
   color: #fff;
 }
+
 .hero-section::before {
   content: "";
   position: absolute;
@@ -27,8 +29,9 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgb(0 0 0 / 50%);
 }
+
 .hero-section .container {
   position: relative;
   z-index: 2;
@@ -38,6 +41,7 @@ body {
 section {
   padding: 60px 0;
 }
+
 h2 {
   margin-bottom: 20px;
   font-weight: 700;
@@ -49,21 +53,23 @@ h2 {
   border-radius: 10px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 16px rgb(0 0 0 / 15%);
 }
 
 /* Footer styling */
 footer {
   background-color: #222;
 }
+
 footer p {
   margin: 0;
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .hero-section h1 {
     font-size: 2.5rem;
   }
@@ -75,7 +81,7 @@ footer p {
   border: 1px solid #d0d7e5; /* subtle border */
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
 }
 
 /* Optional: Add a bottom margin to the heading inside the container */
@@ -94,40 +100,50 @@ footer p {
   list-style: decimal inside;
   padding-left: 0;
 }
+
 .pub-item {
   padding: 12px 0;
   border-bottom: 1px solid #e0e0e0;
 }
+
 .pub-item:last-child {
   border-bottom: none;
 }
+
 .pub-title {
   font-size: 1.1rem;
   color: #3f51b5;
 }
+
 .pub-details {
   font-size: 0.9rem;
   color: #555;
 }
+
 .pub-citations {
   color: #ff4081;
   font-weight: 700;
 }
+
 .pub-year {
   color: #333;
 }
+
 .pub-authors,
 .pub-venue {
   color: #777;
 }
+
 /* Style adjustments for smaller screens */
-@media (max-width: 767px) {
+@media (width <= 767px) {
   .publication-list ol {
     padding-left: 15px; /* Increase left padding for readability */
   }
+
   .pub-title {
     font-size: 1rem; /* Slightly reduce the title size */
   }
+
   .pub-details {
     font-size: 0.8rem; /* Reduce the details text size */
   }
@@ -145,17 +161,20 @@ footer p {
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
+
 .profile-pic {
   width: 80px;
   height: 80px;
   border-radius: 50%;
   object-fit: cover;
 }
+
 .profile-info h2 {
   margin: 0;
   font-size: 1.75rem;
   font-weight: 700;
 }
+
 .profile-info p {
   margin: 0;
   color: #555;
@@ -166,10 +185,12 @@ footer p {
 .publication-list table {
   font-size: 0.9rem;
 }
+
 .publication-list .pub-title a {
   color: #3f51b5;
   text-decoration: none;
 }
+
 .publication-list .pub-title a:hover {
   text-decoration: underline;
 }
@@ -180,6 +201,7 @@ footer p {
   padding: 4px 8px;
   font-size: 0.9rem;
 }
+
 #citation-summary tr:first-child td {
   font-weight: bold;
 }
@@ -229,7 +251,7 @@ footer p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.3);
+  background: rgb(0 0 0 / 30%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -240,6 +262,7 @@ footer p {
   position: relative;  /* Establishes a containing block for absolutely positioned children */
   overflow: hidden;
 }
+
 /* Video fills the container */
 .open-source-bg-video {
   position: absolute;
@@ -250,6 +273,7 @@ footer p {
   object-fit: cover;
   z-index: -1;
 }
+
 /* Overlay sits on top of the video without adding height */
 .open-source-overlay {
   position: absolute;
@@ -257,6 +281,7 @@ footer p {
   left: 0;
   width: 100%;
   height: 100%;
+
   /* Use flex to center the content */
   display: flex;
   flex-direction: column;
@@ -264,8 +289,9 @@ footer p {
   justify-content: center;
   z-index: 1;
   color: #fff;
-  background: rgba(0, 0, 0, 0.35);  /* Optional: a semi-transparent overlay */
+  background: rgb(0 0 0 / 35%);  /* Optional: a semi-transparent overlay */
 }
+
 .open-source-overlay h3 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
@@ -290,8 +316,9 @@ footer p {
   transform: translateZ(0);
   opacity: 1; /* Always visible */
   transition: opacity 0.5s ease;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); /* ADDED - For the gradient effect */
+  background: linear-gradient(to top, rgb(0 0 0 / 80%), transparent); /* ADDED - For the gradient effect */
 }
+
 .video-player:hover .video-overlay {
   opacity: 1;  /* Keep this for hover effect */
 }
@@ -304,7 +331,7 @@ footer p {
 /* Sexy Swiper Navigation */
 .sexy-swiper .swiper-button-prev,
 .sexy-swiper .swiper-button-next {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgb(0 0 0 / 50%);
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -337,7 +364,7 @@ footer p {
 
 .sexy-swiper .swiper-button-prev:hover,
 .sexy-swiper .swiper-button-next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgb(0 0 0 / 80%);
 }
 
 .sexy-swiper .swiper-button-prev i,
@@ -355,7 +382,7 @@ footer p {
   color: #ddd; /* light gray for visibility */
   font-size: 0.8rem;
   font-style: italic;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 3px rgb(0 0 0 / 70%);
   transition: color 0.3s ease;
 }
 
@@ -384,7 +411,7 @@ footer p {
   border-radius: 8px;
   overflow: hidden;
   background: #f2f2f2;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
   margin-bottom: 10px;
 }
 
@@ -409,7 +436,7 @@ footer p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  text-shadow: 1px 1px 3px rgb(0 0 0 / 80%);
 }
 
 .number {

@@ -1,23 +1,23 @@
 // js/load-partials.js
 
 const partials = [
-  { selector: '#navbar-placeholder', url: 'partials/navbar.html' },
-  { selector: '#hero-placeholder', url: 'partials/hero.html' },
-  { selector: '#main-content-placeholder', url: 'partials/main-content.html' },
-  { selector: '#footer-placeholder', url: 'partials/footer.html' }
+  { selector: "#navbar-placeholder", url: "partials/navbar.html" },
+  { selector: "#hero-placeholder", url: "partials/hero.html" },
+  { selector: "#main-content-placeholder", url: "partials/main-content.html" },
+  { selector: "#footer-placeholder", url: "partials/footer.html" }
 ];
 
 function fetchGithubStats() {
   // Fetch GitHub user data for rishigurnani
-  fetch('https://api.github.com/users/rishigurnani')
+  fetch("https://api.github.com/users/rishigurnani")
     .then(response => response.json())
     .then(userData => {
       // Fetch rishigurnani's repositories
-      fetch('https://api.github.com/users/rishigurnani/repos?per_page=100')
+      fetch("https://api.github.com/users/rishigurnani/repos?per_page=100")
         .then(response => response.json())
         .then(reposData => {
           // Fetch the additional repo from Ramprasad-Group/polygnn
-          fetch('https://api.github.com/repos/Ramprasad-Group/polygnn')
+          fetch("https://api.github.com/repos/Ramprasad-Group/polygnn")
             .then(response => response.json())
             .then(additionalRepo => {
               // If the additional repo isn't already in reposData, add it
@@ -38,7 +38,7 @@ function fetchGithubStats() {
                   </a> (${popularRepo.stargazers_count} ★)
                 </p>
               `;
-              document.getElementById('github-stats').innerHTML = statsHtml;
+              document.getElementById("github-stats").innerHTML = statsHtml;
             })
             .catch(err => {
               console.error("Error fetching additional repo:", err);
@@ -54,16 +54,16 @@ function fetchGithubStats() {
                   </a> (${popularRepo.stargazers_count} ★)
                 </p>
               `;
-              document.getElementById('github-stats').innerHTML = statsHtml;
+              document.getElementById("github-stats").innerHTML = statsHtml;
             });
         })
         .catch(err => {
-          document.getElementById('github-stats').innerHTML = '<p>Error loading repositories.</p>';
+          document.getElementById("github-stats").innerHTML = "<p>Error loading repositories.</p>";
           console.error(err);
         });
     })
     .catch(err => {
-      document.getElementById('github-stats').innerHTML = '<p>Error loading GitHub data.</p>';
+      document.getElementById("github-stats").innerHTML = "<p>Error loading GitHub data.</p>";
       console.error(err);
     });
 }
@@ -84,8 +84,8 @@ document.addEventListener("DOMContentLoaded", function() {
       }
       
       // Initialize Slick slider if the slider element exists
-      if ($('.dissertation-slider').length > 0) {
-        $('.dissertation-slider').slick({
+      if ($(".dissertation-slider").length > 0) {
+        $(".dissertation-slider").slick({
           autoplay: true,
           autoplaySpeed: 5000, // slide changes every 5 seconds
           dots: true,
@@ -108,48 +108,48 @@ document.addEventListener("DOMContentLoaded", function() {
       }
       
       // Update the main swiper
-      if (document.querySelector('.main-video-swiper')) {
-        var swiper = new Swiper('.main-video-swiper', {
+      if (document.querySelector(".main-video-swiper")) {
+        var swiper = new Swiper(".main-video-swiper", {
           autoplay: {
             delay: 5000,
             disableOnInteraction: false,
           },
           pagination: {
-            el: '.swiper-pagination',
+            el: ".swiper-pagination",
             clickable: true,
           },
           navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
           },
         });
       
         // Get all sidebar items
-        const sidebarItems = document.querySelectorAll('.sidebar-item');
+        const sidebarItems = document.querySelectorAll(".sidebar-item");
       
         // 1) When a sidebar item is clicked, jump to that slide
         sidebarItems.forEach((item) => {
-          item.addEventListener('click', function() {
-            var slideIndex = parseInt(this.getAttribute('data-slide'), 10);
+          item.addEventListener("click", function() {
+            var slideIndex = parseInt(this.getAttribute("data-slide"), 10);
             swiper.slideTo(slideIndex);
           });
         });
       
         // 2) Listen for Swiper's slideChange event to highlight the active sidebar item
-        swiper.on('slideChange', function() {
+        swiper.on("slideChange", function() {
           // Remove 'active-slide' from all sidebar items
-          sidebarItems.forEach((el) => el.classList.remove('active-slide'));
+          sidebarItems.forEach((el) => el.classList.remove("active-slide"));
       
           // Add 'active-slide' to the sidebar item corresponding to the current slide
           // Use swiper.activeIndex to get the current slide index
           const currentSlideIndex = swiper.activeIndex;
           if (sidebarItems[currentSlideIndex]) {
-            sidebarItems[currentSlideIndex].classList.add('active-slide');
+            sidebarItems[currentSlideIndex].classList.add("active-slide");
           }
         });
       
         // 3) On load, highlight the initial active slide (slide 0)
-        sidebarItems[swiper.activeIndex].classList.add('active-slide');
+        sidebarItems[swiper.activeIndex].classList.add("active-slide");
       }
     }
   }   

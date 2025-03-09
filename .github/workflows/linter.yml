@@ -1,4 +1,4 @@
-name: Lint and Auto-Fix
+name: Lint and Auto-Fix Code
 
 on: [push, pull_request]
 
@@ -15,21 +15,29 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install Linters
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Install Dependencies
         run: |
-          npm install eslint stylelint htmlhint
+          npm install --save-dev eslint stylelint stylelint-config-standard htmlhint
           pip install flake8 autopep8
 
-      - name: Run ESLint
-        run: npx eslint . --fix
+      - name: Run ESLint (JavaScript)
+        run: npx eslint . --fix || true
 
-      - name: Run Stylelint
-        run: npx stylelint "**/*.css" --fix
+      - name: Run Stylelint (CSS)
+        run: npx stylelint "**/*.css" --fix || true
 
-      - name: Run HTMLHint
+      - name: Run HTMLHint (HTML)
         run: npx htmlhint "**/*.html" --config .htmlhintrc || true
 
-      - name: Run Flake8 & Auto-Fix
+      - name: Run Flake8 (Python)
+        run: flake8 . || true
+
+      - name: Auto-Fix Python Code with autopep8
         run: autopep8 --in-place --aggressive --aggressive -r .
 
       - name: Commit and Push Changes

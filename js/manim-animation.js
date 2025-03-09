@@ -8,7 +8,7 @@ function initAnimation() {
 
     p.setup = function() {
       // Get the container element from the DOM.
-      const container = document.getElementById('hero-canvas-container');
+      const container = document.getElementById("hero-canvas-container");
       if (!container) {
         console.error("Hero canvas container not found!");
         return;
@@ -70,7 +70,7 @@ function initAnimation() {
 
     // Ensure the canvas resizes when the window is resized.
     p.windowResized = function() {
-      const container = document.getElementById('hero-canvas-container');
+      const container = document.getElementById("hero-canvas-container");
       if (container) {
         p.resizeCanvas(container.offsetWidth, container.offsetHeight);
       }

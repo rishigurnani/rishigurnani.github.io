@@ -5,6 +5,7 @@ import json
 # List of YouTube video URLs or video IDs
 video_ids = ['wRN6wVhnn7E', 'srLJlK67tXc', 'TFWYoZoezrY', 'eeqzsGVvr9w']
 
+
 def get_view_count(video_id):
     url = f'https://www.youtube.com/watch?v={video_id}'
     response = requests.get(url)
@@ -12,7 +13,7 @@ def get_view_count(video_id):
     # If the request was successful
     if response.status_code == 200:
         soup = BeautifulSoup(response.text, 'html.parser')
-        
+
         # Find the view count in the HTML
         try:
             # Find the span tag with the view count info
@@ -24,6 +25,7 @@ def get_view_count(video_id):
     else:
         print(f"Error fetching video {video_id}: {response.status_code}")
         return 0
+
 
 def generate_youtube_stats():
     total_views = 0
@@ -50,6 +52,7 @@ def generate_youtube_stats():
         json.dump(stats, json_file, indent=4)
 
     print("YouTube stats generated successfully!")
+
 
 if __name__ == "__main__":
     generate_youtube_stats()

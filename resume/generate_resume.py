@@ -3,6 +3,7 @@ import markdown
 from bs4 import BeautifulSoup
 from weasyprint import HTML
 
+
 def group_resume_sections(html):
     """
     Groups consecutive elements starting from an <h2> heading into a container
@@ -28,6 +29,7 @@ def group_resume_sections(html):
                 new_container.append(child.extract())
     return str(new_container)
 
+
 def main():
     # Read the Markdown file.
     with open("resume.md", "r", encoding="utf-8") as f:
@@ -35,7 +37,7 @@ def main():
 
     # Convert Markdown to HTML.
     html_content = markdown.markdown(md_content, extensions=['extra'])
-    
+
     # Group resume sections so that each major section stays together.
     grouped_html = group_resume_sections(html_content)
 
@@ -130,6 +132,7 @@ def main():
     # Convert the HTML to a PDF using WeasyPrint.
     HTML(string=final_html).write_pdf("resume.pdf")
     print("Generated resume.pdf successfully.")
+
 
 if __name__ == "__main__":
     main()

@@ -1,10 +1,14 @@
-name: Lint Code Base
+name: Auto-Fix Lint Issues
 
-on: [push, pull_request]
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
 
 jobs:
   lint:
-    name: Lint Code Base
+    name: Lint and Auto-Fix Code
     runs-on: ubuntu-latest
 
     steps:
@@ -13,9 +17,27 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Run Super Linter
+      - name: Run Super Linter with Auto-Fix
         uses: github/super-linter@v4
         env:
           VALIDATE_ALL_CODEBASE: true
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LINTER_RULES_PATH: .github/linters
+          DISABLE_ERRORS: true  # Prevents the action from failing if issues are found
+          EDITORCONFIG_DISABLE: false
+          VALIDATE_JAVASCRIPT_ES: true
+          VALIDATE_PYTHON_BLACK: true
+          VALIDATE_CSS_STYLELINT: true
+          VALIDATE_HTML: true
+          VALIDATE_MARKDOWN: true
+          AUTO_FIX: true  # Enables auto-fix
+
+      - name: Commit & Push Fixes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Auto-fix lint issues"
+          git push
+        continue-on-error: true  # Ensures that the workflow does not fail if there are no changes

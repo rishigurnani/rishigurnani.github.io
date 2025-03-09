@@ -7,6 +7,7 @@
 - To generate the resume PDF, run `cd resume && python3.9 generate_resume.py && cd ../`
 
 ## Linting
+Copy and paste the following commands into terminal
 ```
 npx eslint . --fix
 npx stylelint "**/*.css" --fix

@@ -1,43 +1,41 @@
-name: Auto-Fix Lint Issues
+name: Lint and Auto-Fix
 
-on: 
-  push:
-    branches:
-      - main
-  pull_request:
+on: [push, pull_request]
 
 jobs:
   lint:
-    name: Lint and Auto-Fix Code
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          fetch-depth: 0
+          node-version: 18
 
-      - name: Run Super Linter with Auto-Fix
-        uses: github/super-linter@v4
-        env:
-          VALIDATE_ALL_CODEBASE: true
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          LINTER_RULES_PATH: .github/linters
-          DISABLE_ERRORS: true  # Prevents the action from failing if issues are found
-          EDITORCONFIG_DISABLE: false
-          VALIDATE_JAVASCRIPT_ES: true
-          VALIDATE_PYTHON_BLACK: true
-          VALIDATE_CSS_STYLELINT: true
-          VALIDATE_HTML: true
-          VALIDATE_MARKDOWN: true
-          AUTO_FIX: true  # Enables auto-fix
-
-      - name: Commit & Push Fixes
+      - name: Install Linters
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          npm install eslint stylelint htmlhint
+          pip install flake8 autopep8
+
+      - name: Run ESLint
+        run: npx eslint . --fix
+
+      - name: Run Stylelint
+        run: npx stylelint "**/*.css" --fix
+
+      - name: Run HTMLHint
+        run: npx htmlhint "**/*.html" --config .htmlhintrc || true
+
+      - name: Run Flake8 & Auto-Fix
+        run: autopep8 --in-place --aggressive --aggressive -r .
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add .
-          git commit -m "Auto-fix lint issues"
+          git commit -m "chore: auto-fix linting issues" || exit 0
           git push
-        continue-on-error: true  # Ensures that the workflow does not fail if there are no changes

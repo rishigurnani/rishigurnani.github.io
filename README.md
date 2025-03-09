@@ -5,3 +5,11 @@
 - To test the site on a local server, run `python3.9 -m http.server 8000`
 - To run repomix and copy the output to clipboard, go to the project root and type `repomix && cat repomix-output.txt | pbcopy`
 - To generate the resume PDF, run `cd resume && python3.9 generate_resume.py && cd ../`
+
+## Linting
+```
+npx eslint . --fix
+npx stylelint "**/*.css" --fix
+npx htmlhint "**/*.html"
+autopep8 --in-place --aggressive --aggressive -r .
+```

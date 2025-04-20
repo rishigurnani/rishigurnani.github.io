@@ -1,6 +1,6 @@
 # DR. RISHI GURNANI
 
-**Email:** rishipgurnani@gmail.com | **>1200 academic citations** | **h-index = 9**  
+**Email:** rishipgurnani@gmail.com | **>1200 academic citations** | **h-index = 10**  
 [Personal Website](https://rishigurnani.github.io/) | [GitHub Profile](https://github.com/rishigurnani)
 
 ---
@@ -58,7 +58,7 @@
 
 1. **polyGNN**: Code for training fast and accurate structure-property models.  
     - Used for the companion paper *polyGNN: Multitask graph neural networks for polymer informatics*.  
-    - [View on GitHub](https://github.com/Ramprasad-Group/polygnn) (**35 stars** ⭐).  
+    - [View on GitHub](https://github.com/Ramprasad-Group/polygnn) (**38 stars** ⭐).  
 
 ---
 

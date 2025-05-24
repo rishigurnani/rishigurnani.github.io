@@ -1,8 +1,8 @@
 {
   "devDependencies": {
-    "eslint": "^9.25.0",
+    "eslint": "^9.27.0",
     "htmlhint": "^1.1.4",
-    "stylelint": "^16.18.0",
+    "stylelint": "^16.19.1",
     "stylelint-config-standard": "^37.0.0"
   }
 }

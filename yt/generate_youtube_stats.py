@@ -5,6 +5,7 @@ from playwright.async_api import async_playwright
 # List of YouTube video IDs
 video_ids = ['wRN6wVhnn7E', 'srLJlK67tXc', 'TFWYoZoezrY', 'eeqzsGVvr9w']
 
+
 async def get_view_count(video_id, page):
     url = f'https://www.youtube.com/watch?v={video_id}'
     await page.goto(url)
@@ -19,6 +20,7 @@ async def get_view_count(video_id, page):
     except Exception as e:
         print(f"Error fetching view count for {video_id}: {e}")
         return 0
+
 
 async def generate_youtube_stats():
     total_views = 0

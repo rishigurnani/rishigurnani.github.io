@@ -1,6 +1,6 @@
 # DR. RISHI GURNANI
 
-**Email:** rishipgurnani@gmail.com | **>1200 academic citations** | **h-index = 10**  
+**Email:** rishipgurnani@gmail.com | **>1800 academic citations** | **h-index = 13**  
 [Personal Website](https://rishigurnani.github.io/) | [GitHub Profile](https://github.com/rishigurnani)
 
 ---
@@ -28,16 +28,27 @@
 
 ---
 
-## WORK EXPERIENCE  
+## WORK EXPERIENCE
+### **Coca-Cola | Atlanta, GA**  
+**Senior Manager, Artificial Intelligence** (February 2025 - present)  
+
+- ML philosophy: Start simple and add complexity only as needed. Prefer models that incorporate domain wisdom. Prefer models that are explainable. Do not believe your model until you have tested it in the hardest possible conditions.
+- Expert in developing fit-for-purpose machine learning algorithms and E2E model development from data discovery to model shipping.
+- **Expert in:**  
+    - `Physics-informed ML`, `Graph Neural Networks`, `Cheminformatics`, `(Un)supervised Learning`, `Dimensionality Reduction`, `Clustering`, `Regression`, `Classification`.  
+- **Deep knowledge of:**  
+    - `RDKit`, `PyTorch`, `SymPy`, `Numpy`, `Pandas`, `Scikit-learn`, `Selenium`, `Playwright`, `BS4`, `Flask`, `D3`, `SQL`, `PyTest`, `Cypress`, `Vitest`, `Full Stack Development`.
+- Experience in NLP, sentence embedding models, prompt engineering for LLM-based structured data extraction at scale.
+- Developed novel algorithms for 1. predicting the color of beverage mixes 2. beverage recommendation systems 3. model validaton, and 4. model ensembling.
+- Delivered process improvement via dashboard automation (35% reduction in manual time spent by VP), enhancing project efficiency and reducing error rate.
+
+---
+
 ### **Matmerize Inc. | Atlanta, GA**  
 **Director of Software Engineering & Algorithms** (March 2021 - February 2025)  
 
 - Oversee the development of an **enterprise ML software** (~2000 commits, ~100k lines of code, 5 languages) serving **>1000 users from >20 companies**.  
 - End-to-end experience with ML model development & deployment: **data-wrangling, web scraping, ML model prototyping & optimization, graphical user interface, unit testing, end-to-end testing, cloud deployment (AWS)**.  
-- **Expert in:**  
-    - `Physics-informed ML`, `Graph Neural Networks`, `Cheminformatics`, `(Un)supervised Learning`, `Dimensionality Reduction`, `Clustering`, `Regression`, `Classification`.  
-- **Deep knowledge of:**  
-    - `RDKit`, `PyTorch`, `SymPy`, `Numpy`, `Pandas`, `Scikit-learn`, `Selenium`, `Playwright`, `BS4`, `Flask`, `D3`, `SQL`, `PyTest`, `Cypress`, `Vitest`, `Full Stack Development`.
 
 ---
 
@@ -50,14 +61,6 @@
 4. **Graduate Student Award**, Materials Research Society (2023).  
 5. **Gold Medal for Best Presentation**, 2nd Energy & Informatics International Forum (2022).  
 6. **Best Talk**, Georgia Tech Student Polymer Network Spring Symposium (2022).  
-
----
-
-## OPEN-SOURCE CODE  
-
-1. **polyGNN**: Code for training fast and accurate structure-property models.  
-    - Used for the companion paper *polyGNN: Multitask graph neural networks for polymer informatics*.  
-    - [View on GitHub](https://github.com/Ramprasad-Group/polygnn) (**38 stars** ⭐).  
 
 ---
 

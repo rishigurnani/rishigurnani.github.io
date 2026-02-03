@@ -29,9 +29,8 @@
 ---
 
 ## WORK EXPERIENCE  
-
 ### **Matmerize Inc. | Atlanta, GA**  
-**Director of Software Engineering & Algorithms** (March 2021 - Present)  
+**Director of Software Engineering & Algorithms** (March 2021 - February 2025)  
 
 - Oversee the development of an **enterprise ML software** (~2000 commits, ~100k lines of code, 5 languages) serving **>1000 users from >20 companies**.  
 - End-to-end experience with ML model development & deployment: **data-wrangling, web scraping, ML model prototyping & optimization, graphical user interface, unit testing, end-to-end testing, cloud deployment (AWS)**.  

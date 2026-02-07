@@ -22,37 +22,43 @@ function animateCounter(element, start, end, duration) {
 
 // Function to update all counters from the API and JSON files
 function updateCountersFromAPI() {
-  // 1. LinkedIn followers from linkedin/stats.json
+  // 1. LinkedIn followers
   fetch("linkedin/stats.json")
     .then(res => res.json())
     .then(data => {
-      const linkedinFollowers = data.followers;
       const linkedinEl = document.getElementById("linkedin-counter");
-      if (linkedinEl) {
-        animateCounter(linkedinEl, 0, linkedinFollowers, 2000);
-      }
+      if (linkedinEl) animateCounter(linkedinEl, 0, data.followers, 2000);
     })
     .catch(err => console.error("Error loading LinkedIn stats:", err));
 
-  // 2. GitHub stars: sum stars from profile repos and add polygnn repo stars if needed
+  // 2. GitHub stars: sum stars from profile repos and handle polygnn gracefully
   fetch("https://api.github.com/users/rishigurnani/repos?per_page=100")
     .then(res => res.json())
     .then(repos => {
-      // Fetch polygnn repo separately
+      let totalStars = repos.reduce((sum, repo) => sum + repo.stargazers_count, 0);
+      const githubEl = document.getElementById("github-counter");
+
+      // Attempt to fetch polygnn repo stars
       fetch("https://api.github.com/repos/Ramprasad-Group/polygnn")
-        .then(res => res.json())
+        .then(res => {
+          if (!res.ok) throw new Error("Polygnn repo not found");
+          return res.json();
+        })
         .then(polygnnRepo => {
-          let totalStars = repos.reduce((sum, repo) => sum + repo.stargazers_count, 0);
-          // If the polygnn repo isn't already in the user's repos, add its stars.
+          // Add stars if polygnn isn't already in the user's repo list
           if (!repos.some(repo => repo.full_name === polygnnRepo.full_name)) {
             totalStars += polygnnRepo.stargazers_count;
           }
-          const githubEl = document.getElementById("github-counter");
+        })
+        .catch(err => {
+          console.warn("Could not add Polygnn stars, showing base stars only:", err);
+        })
+        .finally(() => {
+          // Finalize counter with whatever stars we successfully gathered
           if (githubEl) {
             animateCounter(githubEl, 0, totalStars, 2000);
           }
-        })
-        .catch(err => console.error("Error loading polygnn repo:", err));
+        });
     })
     .catch(err => console.error("Error loading GitHub repos:", err));
 
@@ -60,42 +66,31 @@ function updateCountersFromAPI() {
   fetch("google_scholar.json")
     .then(res => res.json())
     .then(data => {
-      const totalCitations = data.total_citations;
       const citationsEl = document.getElementById("citations-counter");
-      if (citationsEl) {
-        animateCounter(citationsEl, 0, totalCitations, 2000);
-      }
+      if (citationsEl) animateCounter(citationsEl, 0, data.total_citations, 2000);
     })
     .catch(err => console.error("Error loading Google Scholar stats:", err));
 
-  // 4. YouTube views from yt/youtube-stats.json
+  // 4. YouTube views
   fetch("yt/youtube-stats.json")
     .then(res => res.json())
     .then(data => {
-      const totalViews = data.total_views;
       const youtubeEl = document.getElementById("youtube-counter");
-      if (youtubeEl) {
-        animateCounter(youtubeEl, 0, totalViews, 2000);
-      }
+      if (youtubeEl) animateCounter(youtubeEl, 0, data.total_views, 2000);
     })
     .catch(err => console.error("Error loading YouTube stats:", err));
 }
 
 // Wait until the counter elements are in the DOM, then update them
 function initializeCounters() {
-  const linkedinEl = document.getElementById("linkedin-counter");
-  const githubEl = document.getElementById("github-counter");
-  const citationsEl = document.getElementById("citations-counter");
-  const youtubeEl = document.getElementById("youtube-counter");
+  const elements = ["linkedin-counter", "github-counter", "citations-counter", "youtube-counter"];
+  const allFound = elements.every(id => document.getElementById(id));
   
-  if (!linkedinEl || !githubEl || !citationsEl || !youtubeEl) {
-    console.log("Counter elements not found yet, retrying...");
+  if (!allFound) {
     setTimeout(initializeCounters, 100);
     return;
   }
   updateCountersFromAPI();
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  initializeCounters();
-});
+document.addEventListener("DOMContentLoaded", initializeCounters);

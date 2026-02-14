@@ -31,8 +31,7 @@ function fetchGithubStats() {
               // Build the HTML with GitHub stats
               const statsHtml = `
                 <p><strong>Total Public Repos:</strong> ${userData.public_repos}</p>
-                <p><strong>Followers:</strong> ${userData.followers}</p>
-                <p><strong>Most Popular Repo:</strong> 
+                <p><strong>Most Popular:</strong> 
                   <a href="${popularRepo.html_url}" target="_blank" style="color:#ffd700;">
                     ${popularRepo.name}
                   </a> (${popularRepo.stargazers_count} ★)

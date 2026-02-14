@@ -462,7 +462,7 @@ footer p {
   display: none !important;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   /* Make arrows smaller on mobile */
   .swiper-button-next, 
   .swiper-button-prev {

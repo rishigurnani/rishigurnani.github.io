@@ -461,3 +461,12 @@ footer p {
 .swiper-pagination {
   display: none !important;
 }
+
+@media (max-width: 768px) {
+  /* Make arrows smaller on mobile */
+  .swiper-button-next, 
+  .swiper-button-prev {
+    transform: scale(0.7); 
+    margin: 0 -5px; /* Pull them closer to the edges */
+  }
+}

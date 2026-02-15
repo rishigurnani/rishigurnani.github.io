@@ -484,11 +484,11 @@ footer p {
 /* Ensure the metrics box and chart share the same alignment */
 .citation-metrics-container, 
 .chart-container {
-    background-color: #ffffff;
+    background-color: #fff;
     border: 1px solid #e0e0e0;
     border-radius: 12px;
     padding: 24px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgb(0 0 0 / 5%);
     width: 100%;
 }
 

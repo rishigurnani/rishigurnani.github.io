@@ -470,3 +470,41 @@ footer p {
     margin: 0 -5px; /* Pull them closer to the edges */
   }
 }
+
+/* Unify the Right Sidebar */
+.publication-sidebar {
+    position: sticky;
+    top: 100px; /* Adjust based on your navbar height */
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Ensure the metrics box and chart share the same alignment */
+.citation-metrics-container, 
+.chart-container {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 100%;
+}
+
+/* Fix the table alignment to prevent it from feeling cramped */
+.publication-list table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Adds breathing room between rows */
+}
+
+.publication-list td {
+    vertical-align: middle;
+    padding: 15px 10px;
+}
+
+/* Adjust the Chart container to align with the box above */
+#citations-chart-wrapper {
+    margin-top: 10px;
+}

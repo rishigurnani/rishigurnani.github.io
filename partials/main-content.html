@@ -1,112 +1,74 @@
-<!-- partials/main-content.html -->
-
-<!-- partials/main-content.html -->
-
-<!-- About Section -->
 <section id="about" class="py-5 bg-light">
   <div class="container" data-aos="fade-up">
     <div class="row">
-      <!-- Left Column: Image -->
       <div class="col-md-6 text-center">
-        <img src="https://rishigurnani.wordpress.com/wp-content/uploads/2020/08/group-1.jpeg" 
-             alt="About" class="img-fluid rounded">
+        <img src="https://rishigurnani.wordpress.com/wp-content/uploads/2020/08/group-1.jpeg" alt="About" class="img-fluid rounded">
       </div>
-      
-      <!-- Right Column: Text and Counters -->
       <div class="col-md-6">
-        <!-- Text Section (at the top) -->
-        <div class="text-section text-center mb-4">
+        <div class="text-section text-left mb-4">
           <h2>About Me</h2>
-          <p>This site is a curated collection of links and projects on Deep Learning and Chemistry.
-            I currently am working at Coca-Cola Global R&D bringing AI to ingredient discovery.
-          </p>
+          <p>This site is a curated collection of links and projects on Deep Learning and Chemistry.<br>I currently am working at Coca-Cola Global R&D bringing AI to ingredient discovery.</p>
         </div>
-        
-        <!-- 2x2 Counter Grid -->
         <div class="counter-grid">
-          <!-- LinkedIn Counter -->
           <div class="counter">
-            <video class="fire-video" autoplay loop muted playsinline>
-              <source src="https://videos.pexels.com/video-files/856296/856296-hd_1920_960_24fps.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <div class="overlay">
-              <div class="number" id="linkedin-counter">0</div>
-              <div class="label">LinkedIn Followers</div>
-            </div>
+            <video class="fire-video" autoplay loop muted playsinline><source src="https://videos.pexels.com/video-files/856296/856296-hd_1920_960_24fps.mp4" type="video/mp4"></video>
+            <div class="overlay"><div class="number" id="linkedin-counter">0</div><div class="label">LinkedIn Followers</div></div>
           </div>
-          <!-- YouTube Counter -->
           <div class="counter">
-            <video class="fire-video" autoplay loop muted playsinline>
-              <source src="https://videos.pexels.com/video-files/856296/856296-hd_1920_960_24fps.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <div class="overlay">
-              <div class="number" id="youtube-counter">0</div>
-              <div class="label">YouTube Views</div>
-            </div>
+            <video class="fire-video" autoplay loop muted playsinline><source src="https://videos.pexels.com/video-files/856296/856296-hd_1920_960_24fps.mp4" type="video/mp4"></video>
+            <div class="overlay"><div class="number" id="youtube-counter">0</div><div class="label">YouTube Views</div></div>
           </div>
-          <!-- Citations Counter -->
           <div class="counter">
-            <video class="fire-video" autoplay loop muted playsinline>
-              <source src="https://videos.pexels.com/video-files/856296/856296-hd_1920_960_24fps.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <div class="overlay">
-              <div class="number" id="citations-counter">0</div>
-              <div class="label">Citations</div>
-            </div>
+            <video class="fire-video" autoplay loop muted playsinline><source src="https://videos.pexels.com/video-files/856296/856296-hd_1920_960_24fps.mp4" type="video/mp4"></video>
+            <div class="overlay"><div class="number" id="citations-counter">0</div><div class="label">Citations</div></div>
           </div>
-          <!-- GitHub Counter -->
           <div class="counter">
-            <video class="fire-video" autoplay loop muted playsinline>
-              <source src="https://videos.pexels.com/video-files/856296/856296-hd_1920_960_24fps.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <div class="overlay">
-              <div class="number" id="github-counter">0</div>
-              <div class="label">GitHub Stars</div>
-            </div>
+            <video class="fire-video" autoplay loop muted playsinline><source src="https://videos.pexels.com/video-files/856296/856296-hd_1920_960_24fps.mp4" type="video/mp4"></video>
+            <div class="overlay"><div class="number" id="github-counter">0</div><div class="label">GitHub Stars</div></div>
           </div>
-        </div> <!-- .counter-grid -->
-      </div> <!-- .col-md-8 -->
-    </div> <!-- .row -->
-  </div> <!-- .container -->
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Publications Section -->
 <section id="publications" class="py-5">
-  <div class="container" data-aos="fade-up">
-    <h2 class="mb-4">Publications</h2>
-    <div class="row">
-      <!-- Left Panel: Profile & Publications -->
-      <div class="col-md-8 left-panel">
-        <!-- Publications Table -->
-        <div class="publication-list">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>Title</th>
-                <th>Citations</th>
-                <th>Year</th>
-              </tr>
-            </thead>
-            <tbody id="publication-table-body">
-              <!-- Publication rows inserted dynamically -->
+  <div class="container">
+    <div class="row flex-column-reverse flex-lg-row">
+      <div class="col-lg-8 publication-list">
+        <h2>Publications</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th class="text-end">Citations</th>
+              <th class="text-end">Year</th>
+            </tr>
+          </thead>
+          <tbody id="publication-table-body">
             </tbody>
-          </table>
+        </table>
+        <div class="text-center mt-4">
+          <button id="show-more-pub-btn" class="btn btn-outline-secondary">Show 14 more</button>
         </div>
       </div>
-      <!-- Right Panel: Citation Metrics & Chart (hidden on mobile) -->
-      <div class="col-md-4 right-panel d-none d-md-block">
-        <div class="citation-metrics-container mb-4">
+
+      <div class="col-lg-4">
+        <div class="publication-sidebar p-4 bg-white shadow-sm rounded">
           <h4 class="mb-3">Citation Metrics</h4>
-          <table class="table table-sm" id="citation-summary">
-            <!-- Citation summary rows inserted dynamically -->
-          </table>
-        </div>
-        <div class="chart-container">
-          <canvas id="citationsChart" style="max-width: 100%; height: 300px;"></canvas>
+          <div class="d-flex justify-content-between border-bottom pb-2">
+            <span>Total Citations:</span>
+            <strong id="total-citations-val">0</strong>
+          </div>
+          <div class="d-flex justify-content-between pt-2 mb-4">
+            <span>h-index:</span>
+            <strong id="h-index-val">13</strong>
+          </div>
+
+          <h6 class="text-muted mb-3">Citations per Year</h6>
+          <div style="height: 200px; width: 100%;">
+            <canvas id="citationsChart"></canvas>
+          </div>
         </div>
       </div>
     </div>

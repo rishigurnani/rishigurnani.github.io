@@ -41,6 +41,31 @@ function initializeVideoGazeLogic() {
 }
 
 /**
+ * Calculates the h-index from an array of publication objects.
+ * @param {Array} publications - Array of objects containing a 'citations' property.
+ * @returns {number} The calculated h-index.
+ */
+function calculateHIndex(publications) {
+    if (!publications || publications.length === 0) return 0;
+
+    // Extract citation counts and sort them in descending order
+    const citations = publications
+        .map(pub => parseInt(pub.citations) || 0)
+        .sort((a, b) => b - a);
+
+    let h = 0;
+    for (let i = 0; i < citations.length; i++) {
+        // If the citation count is >= the paper's rank (i+1), increment h
+        if (citations[i] >= i + 1) {
+            h = i + 1;
+        } else {
+            break;
+        }
+    }
+    return h;
+}
+
+/**
  * Fetches publication data and populates the UI.
  * Includes a retry loop to ensure the partial HTML has loaded.
  */
@@ -61,8 +86,14 @@ async function initPublicationsAndCharts() {
         // 1. Update Sidebar Metrics
         const totalCitEl = document.getElementById("total-citations-val");
         const hIndexEl = document.getElementById("h-index-val");
-        if(totalCitEl) totalCitEl.innerText = data.total_citations;
-        // Note: h-index isn't in your JSON yet, so we keep the HTML value or add it to JSON later
+        
+        if (totalCitEl) totalCitEl.innerText = data.total_citations;
+        
+        // Calculate and display h-index automatically
+        if (hIndexEl && data.publications) {
+            const hIndex = calculateHIndex(data.publications);
+            hIndexEl.innerText = hIndex;
+        }
 
         // 2. Populate Publication Table (Initial 6 rows)
         renderTableRows(data.publications.slice(0, 6));

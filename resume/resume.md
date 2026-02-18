@@ -1,6 +1,6 @@
 # DR. RISHI GURNANI
 
-**Email:** rishipgurnani@gmail.com | **>1800 academic citations** | **h-index = 13**  
+**Email:** rishipgurnani@gmail.com | **>1800 academic citations** | **h-index = 14**  
 [Personal Website](https://rishigurnani.github.io/) | [GitHub Profile](https://github.com/rishigurnani)
 
 ---

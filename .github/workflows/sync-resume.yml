@@ -22,12 +22,12 @@ jobs:
           git clone https://github.com/rishipgurnani/resume-2026.git resume_src
 
       # 3. Compile the LaTeX file into a PDF
-      # This action handles the TeX Live environment for you.
       - name: Compile LaTeX
         uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
           working_directory: resume_src
+          latexmk_use_xelatex: true
 
       # 4. Move the PDF to the /resume/ folder and push changes
       - name: Deploy PDF to Website

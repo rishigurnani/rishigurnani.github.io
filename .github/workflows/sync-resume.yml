@@ -1,0 +1,48 @@
+name: Sync Resume from rishipgurnani
+on:
+  workflow_dispatch: # Allows you to run this manually with a button click
+  push:
+    branches:
+      - main # Automatically runs if you update your website code
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Checkout the website repo using your Personal Access Token
+      # This allows the action to push the new PDF back to your repo.
+      - name: Checkout Website Repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
+
+      # 2. Clone the public resume source repo into a temporary folder
+      - name: Fetch Resume Source
+        run: |
+          git clone https://github.com/rishipgurnani/resume-2026.git resume_src
+
+      # 3. Compile the LaTeX file into a PDF
+      # This action handles the TeX Live environment for you.
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          working_directory: resume_src
+
+      # 4. Move the PDF to the /resume/ folder and push changes
+      - name: Deploy PDF to Website
+        run: |
+          # Ensure the directory exists
+          mkdir -p resume
+          
+          # Move and overwrite the existing PDF
+          cp resume_src/main.pdf ./resume/resume.pdf
+          
+          # Configure Git to commit the changes
+          git config --global user.name "GitHub Action"
+          git config --global user.email "actions@github.com"
+          
+          # Stage, commit, and push
+          git add resume/resume.pdf
+          git commit -m "Automated update: Synced resume.pdf from rishipgurnani/resume-2026" || echo "No changes to commit"
+          git push

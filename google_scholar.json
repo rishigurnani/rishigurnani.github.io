@@ -1,5 +1,5 @@
 {
- "total_citations": 1920,
+ "total_citations": 1946,
  "citations_per_year": { 
   "2017": 30,
   "2018": 73,
@@ -9,50 +9,50 @@
   "2022": 181,
   "2023": 230,
   "2024": 214,
-  "2025": 537,
-  "2026": 198
+  "2025": 525,
+  "2026": 235
  },
  "publications": [
   {
     "title": "Experimental characterization of the mechanical properties of 3D-printed ABS and polycarbonate parts",
     "authors": "JT Cantrell, S Rohde, D Damiani, R Gurnani, L DiSandro, J Anton, ...",
     "venue": "Rapid Prototyping Journal 23 (4), 811-824, 2017",
-    "citations": 775,
+    "citations": 777,
     "year": 2017 
   },
   {
     "title": "Machine-learning predictions of polymer properties with Polymer Genome",
     "authors": "H Doan Tran, C Kim, L Chen, A Chandrasekaran, R Batra, S Venkatram, ...",
     "venue": "Journal of Applied Physics 128 (17), 2020",
-    "citations": 313,
+    "citations": 316,
     "year": 2020 
   },
   {
     "title": "Design of functional and sustainable polymers assisted by artificial intelligence",
     "authors": "H Tran, R Gurnani, C Kim, G Pilania, HK Kwon, RP Lively, R Ramprasad",
     "venue": "Nature Reviews Materials 9 (12), 866-886, 2024",
-    "citations": 190,
+    "citations": 195,
     "year": 2024 
   },
   {
     "title": "Experimental characterization of the shear properties of 3D&#8211;printed ABS and polycarbonate parts",
     "authors": "S Rohde, J Cantrell, A Jerez, C Kroese, D Damiani, R Gurnani, ...",
     "venue": "Experimental Mechanics 58 (6), 871-884, 2018",
-    "citations": 109,
+    "citations": 110,
     "year": 2018 
   },
   {
     "title": "Polymer informatics at scale with multitask graph neural networks",
     "authors": "R Gurnani, C Kuenneth, A Toland, R Ramprasad",
     "venue": "Chemistry of Materials 35 (4), 1560-1567, 2023",
-    "citations": 105,
+    "citations": 106,
     "year": 2023 
   },
   {
     "title": "AI-assisted discovery of high-temperature dielectrics for energy storage",
     "authors": "R Gurnani, S Shukla, D Kamal, C Wu, J Hao, C Kuenneth, P Aklujkar, ...",
     "venue": "Nature communications 15 (1), 6107, 2024",
-    "citations": 90,
+    "citations": 92,
     "year": 2024 
   },
   {
@@ -73,28 +73,35 @@
     "title": "Gas permeability, diffusivity, and solubility in polymers: Simulation-experiment data fusion and multi-task machine learning",
     "authors": "BK Phan, KH Shen, R Gurnani, H Tran, R Lively, R Ramprasad",
     "venue": "npj Computational Materials 10 (1), 186, 2024",
-    "citations": 44,
+    "citations": 46,
     "year": 2024 
   },
   {
     "title": "Pendant group functionalization of cyclic olefin for high temperature and high&#8208;density energy storage",
     "authors": "S Shukla, C Wu, A Mishra, J Pan, AP Charnay, A Khomane, A Deshmukh, ...",
     "venue": "Advanced Materials 36 (52), 2402133, 2024",
-    "citations": 31,
+    "citations": 35,
     "year": 2024 
   },
   {
     "title": "Effect of fluorine in redesigning energy-storage properties of high-temperature dielectric polymers",
     "authors": "AA Deshmukh, C Wu, O Yassin, L Chen, S Shukla, J Zhou, AR Khomane, ...",
     "venue": "ACS Applied Materials &amp; Interfaces 15 (40), 46840-46848, 2023",
-    "citations": 22,
+    "citations": 23,
     "year": 2023 
+  },
+  {
+    "title": "Stereoisomerism of Vicinal Polydichloronorbornene for Ultra&#8208;High&#8208;Temperature Capacitive Energy Storage",
+    "authors": "J Hao, S Shukla, R Gurnani, M Mukherjee, H Sahu, A Khomane, ...",
+    "venue": "Advanced Materials 37 (15), 2417625, 2025",
+    "citations": 18,
+    "year": 2025 
   },
   {
     "title": "A physics-enforced neural network to predict polymer melt viscosity",
     "authors": "A Jain, R Gurnani, A Rajan, HJ Qi, R Ramprasad",
     "venue": "npj Computational Materials 11 (1), 42, 2025",
-    "citations": 17,
+    "citations": 18,
     "year": 2025 
   },
   {
@@ -105,24 +112,17 @@
     "year": 2017 
   },
   {
-    "title": "Stereoisomerism of Vicinal Polydichloronorbornene for Ultra&#8208;High&#8208;Temperature Capacitive Energy Storage",
-    "authors": "J Hao, S Shukla, R Gurnani, M Mukherjee, H Sahu, A Khomane, ...",
-    "venue": "Advanced Materials 37 (15), 2417625, 2025",
-    "citations": 16,
-    "year": 2025 
-  },
-  {
     "title": "Rationally designed high-temperature polymer dielectrics for capacitive energy storage: An experimental and computational alliance",
     "authors": "PS Aklujkar, R Gurnani, P Rout, AR Khomane, I Mutegi, M Desai, ...",
     "venue": "Progress in Polymer Science 161, 101931, 2025",
-    "citations": 15,
+    "citations": 16,
     "year": 2025 
   },
   {
     "title": "Polymer composites informatics for flammability, thermal, mechanical and electrical property predictions",
     "authors": "H Tran, C Kim, R Gurnani, O Hvidsten, J DeSimpliciis, R Ramprasad, ...",
     "venue": "Polymer Chemistry 16 (30), 3459-3467, 2025",
-    "citations": 11,
+    "citations": 12,
     "year": 2025 
   },
   {

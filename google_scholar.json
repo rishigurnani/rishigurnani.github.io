@@ -1,5 +1,5 @@
 {
- "total_citations": 1946,
+ "total_citations": 1959,
  "citations_per_year": { 
   "2017": 30,
   "2018": 73,
@@ -10,7 +10,7 @@
   "2023": 230,
   "2024": 214,
   "2025": 525,
-  "2026": 235
+  "2026": 248
  },
  "publications": [
   {
@@ -24,14 +24,14 @@
     "title": "Machine-learning predictions of polymer properties with Polymer Genome",
     "authors": "H Doan Tran, C Kim, L Chen, A Chandrasekaran, R Batra, S Venkatram, ...",
     "venue": "Journal of Applied Physics 128 (17), 2020",
-    "citations": 316,
+    "citations": 320,
     "year": 2020 
   },
   {
     "title": "Design of functional and sustainable polymers assisted by artificial intelligence",
     "authors": "H Tran, R Gurnani, C Kim, G Pilania, HK Kwon, RP Lively, R Ramprasad",
     "venue": "Nature Reviews Materials 9 (12), 866-886, 2024",
-    "citations": 195,
+    "citations": 198,
     "year": 2024 
   },
   {
@@ -52,14 +52,14 @@
     "title": "AI-assisted discovery of high-temperature dielectrics for energy storage",
     "authors": "R Gurnani, S Shukla, D Kamal, C Wu, J Hao, C Kuenneth, P Aklujkar, ...",
     "venue": "Nature communications 15 (1), 6107, 2024",
-    "citations": 92,
+    "citations": 93,
     "year": 2024 
   },
   {
     "title": "PolyG2G: A novel machine learning algorithm applied to the generative design of polymer dielectrics",
     "authors": "R Gurnani, D Kamal, H Tran, H Sahu, K Scharm, U Ashraf, R Ramprasad",
     "venue": "Chemistry of Materials 33 (17), 7008-7016, 2021",
-    "citations": 81,
+    "citations": 82,
     "year": 2021 
   },
   {
@@ -73,7 +73,7 @@
     "title": "Gas permeability, diffusivity, and solubility in polymers: Simulation-experiment data fusion and multi-task machine learning",
     "authors": "BK Phan, KH Shen, R Gurnani, H Tran, R Lively, R Ramprasad",
     "venue": "npj Computational Materials 10 (1), 186, 2024",
-    "citations": 46,
+    "citations": 47,
     "year": 2024 
   },
   {
@@ -87,21 +87,21 @@
     "title": "Effect of fluorine in redesigning energy-storage properties of high-temperature dielectric polymers",
     "authors": "AA Deshmukh, C Wu, O Yassin, L Chen, S Shukla, J Zhou, AR Khomane, ...",
     "venue": "ACS Applied Materials &amp; Interfaces 15 (40), 46840-46848, 2023",
-    "citations": 23,
+    "citations": 24,
     "year": 2023 
   },
   {
     "title": "Stereoisomerism of Vicinal Polydichloronorbornene for Ultra&#8208;High&#8208;Temperature Capacitive Energy Storage",
     "authors": "J Hao, S Shukla, R Gurnani, M Mukherjee, H Sahu, A Khomane, ...",
     "venue": "Advanced Materials 37 (15), 2417625, 2025",
-    "citations": 18,
+    "citations": 19,
     "year": 2025 
   },
   {
     "title": "A physics-enforced neural network to predict polymer melt viscosity",
     "authors": "A Jain, R Gurnani, A Rajan, HJ Qi, R Ramprasad",
     "venue": "npj Computational Materials 11 (1), 42, 2025",
-    "citations": 18,
+    "citations": 19,
     "year": 2025 
   },
   {

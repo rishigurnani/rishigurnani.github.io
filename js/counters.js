@@ -62,9 +62,8 @@ function updateCountersFromAPI() {
     })
     .catch(err => console.error("Error fetching GitHub data:", err));
 
-  // 3. Citations from google_scholar.json
-  fetch("google_scholar.json")
-    .then(res => res.json())
+  // 3. Citations from the configured Google Scholar source (see js/scholar-data.js)
+  loadScholarData()
     .then(data => {
       const totalCitations = data.total_citations || 0;
       const citationsEl = document.getElementById("citations-counter");

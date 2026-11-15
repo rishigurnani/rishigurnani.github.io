@@ -80,8 +80,8 @@ async function initPublicationsAndCharts() {
     }
 
     try {
-        const response = await fetch("google_scholar.json");
-        const data = await response.json();
+        // Loaded from the configured Google Scholar source (see js/scholar-data.js)
+        const data = await loadScholarData();
 
         // 1. Update Sidebar Metrics
         const totalCitEl = document.getElementById("total-citations-val");

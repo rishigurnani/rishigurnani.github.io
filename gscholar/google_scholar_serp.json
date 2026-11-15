@@ -1,0 +1,396 @@
+{
+  "search_metadata": {
+    "id": "6af9bd0ba97f52d87059e702",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/c3M8aB_TdRqhWPLvFWwNcNzKQkX3kGgn0lxjm1TgbHA/6af9bd0ba97f52d87059e702.json",
+    "markdown_endpoint": "https://serpapi.com/searches/c3M8aB_TdRqhWPLvFWwNcNzKQkX3kGgn0lxjm1TgbHA/6af9bd0ba97f52d87059e702.md",
+    "created_at": "2026-11-15 14:09:15 UTC",
+    "processed_at": "2026-11-15 14:09:15 UTC",
+    "google_scholar_author_url": "https://scholar.google.com/citations?user=C2Leh-oAAAAJ&hl=en",
+    "raw_html_file": "https://serpapi.com/searches/c3M8aB_TdRqhWPLvFWwNcNzKQkX3kGgn0lxjm1TgbHA/6af9bd0ba97f52d87059e702.html",
+    "total_time_taken": 1.24
+  },
+  "search_parameters": {
+    "engine": "google_scholar_author",
+    "author_id": "C2Leh-oAAAAJ",
+    "hl": "en"
+  },
+  "author": {
+    "name": "Rishi Gurnani",
+    "affiliations": "Senior Manager, Data Science",
+    "email": "Verified email at gatech.edu",
+    "website": "http://rishigurnani.github.io/",
+    "interests": [
+      {
+        "title": "Polymer informatics",
+        "link": "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:polymer_informatics",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en&mauthors=label%3Apolymer_informatics"
+      },
+      {
+        "title": "Materials informatics",
+        "link": "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:materials_informatics",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en&mauthors=label%3Amaterials_informatics"
+      },
+      {
+        "title": "Energy materials",
+        "link": "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:energy_materials",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en&mauthors=label%3Aenergy_materials"
+      }
+    ],
+    "thumbnail": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=C2Leh-oAAAAJ&citpid=1"
+  },
+  "articles": [
+    {
+      "title": "Experimental characterization of the mechanical properties of 3D-printed ABS and polycarbonate parts",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C2Leh-oAAAAJ&citation_for_view=C2Leh-oAAAAJ:9yKSN-GCB0IC",
+      "citation_id": "C2Leh-oAAAAJ:9yKSN-GCB0IC",
+      "authors": "JT Cantrell, S Rohde, D Damiani, R Gurnani, L DiSandro, J Anton, ...",
+      "publication": "Rapid Prototyping Journal 23 (4), 811-824, 2017",
+      "cited_by": {
+        "value": 818,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11667914003667270409",
+        "serpapi_link": "https://serpapi.com/search.json?cites=11667914003667270409&engine=google_scholar&hl=en",
+        "cites_id": "11667914003667270409"
+      },
+      "year": "2017"
+    },
+    {
+      "title": "Machine-learning predictions of polymer properties with Polymer Genome",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C2Leh-oAAAAJ&citation_for_view=C2Leh-oAAAAJ:u5HHmVD_uO8C",
+      "citation_id": "C2Leh-oAAAAJ:u5HHmVD_uO8C",
+      "authors": "H Doan Tran, C Kim, L Chen, A Chandrasekaran, R Batra, S Venkatram, ...",
+      "publication": "Journal of Applied Physics 128 (17), 2020",
+      "cited_by": {
+        "value": 380,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=1848614553326675952",
+        "serpapi_link": "https://serpapi.com/search.json?cites=1848614553326675952&engine=google_scholar&hl=en",
+        "cites_id": "1848614553326675952"
+      },
+      "year": "2020"
+    },
+    {
+      "title": "Design of functional and sustainable polymers assisted by artificial intelligence",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C2Leh-oAAAAJ&citation_for_view=C2Leh-oAAAAJ:LkGwnXOMwfcC",
+      "citation_id": "C2Leh-oAAAAJ:LkGwnXOMwfcC",
+      "authors": "H Tran, R Gurnani, C Kim, G Pilania, HK Kwon, RP Lively, R Ramprasad",
+      "publication": "Nature Reviews Materials 9 (12), 866-886, 2024",
+      "cited_by": {
+        "value": 342,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=1477303119596539323",
+        "serpapi_link": "https://serpapi.com/search.json?cites=1477303119596539323&engine=google_scholar&hl=en",
+        "cites_id": "1477303119596539323"
+      },
+      "year": "2024"
+    },
+    {
+      "title": "Polymer informatics at scale with multitask graph neural networks",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C2Leh-oAAAAJ&citation_for_view=C2Leh-oAAAAJ:Tyk-4Ss8FVUC",
+      "citation_id": "C2Leh-oAAAAJ:Tyk-4Ss8FVUC",
+      "authors": "R Gurnani, C Kuenneth, A Toland, R Ramprasad",
+      "publication": "Chemistry of Materials 35 (4), 1560, 2023",
+      "cited_by": {
+        "value": 175,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5635070544810170513",
+        "serpapi_link": "https://serpapi.com/search.json?cites=5635070544810170513&engine=google_scholar&hl=en",
+        "cites_id": "5635070544810170513"
+      },
+      "year": "2023"
+    },
+    {
+      "title": "AI-assisted discovery of high-temperature dielectrics for energy storage",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C2Leh-oAAAAJ&citation_for_view=C2Leh-oAAAAJ:_FxGoFyzp5QC",
+      "citation_id": "C2Leh-oAAAAJ:_FxGoFyzp5QC",
+      "authors": "R Gurnani, S Shukla, D Kamal, C Wu, J Hao, C Kuenneth, P Aklujkar, ...",
+      "publication": "Nature communications 15 (1), 6107, 2024",
+      "cited_by": {
+        "value": 138,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3836917899020174660",
+        "serpapi_link": "https://serpapi.com/search.json?cites=3836917899020174660&engine=google_scholar&hl=en",
+        "cites_id": "3836917899020174660"
+      },
+      "year": "2024"
+    },
+    {
+      "title": "Experimental characterization of the shear properties of 3D–printed ABS and polycarbonate parts",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C2Leh-oAAAAJ&citation_for_view=C2Leh-oAAAAJ:IjCSPb-OGe4C",
+      "citation_id": "C2Leh-oAAAAJ:IjCSPb-OGe4C",
+      "authors": "S Rohde, J Cantrell, A Jerez, C Kroese, D Damiani, R Gurnani, ...",
+      "publication": "Experimental Mechanics 58 (6), 871-884, 2018",
+      "cited_by": {
+        "value": 118,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=17256704408876139433",
+        "serpapi_link": "https://serpapi.com/search.json?cites=17256704408876139433&engine=google_scholar&hl=en",
+        "cites_id": "17256704408876139433"
+      },
+      "year": "2018"
+    },
+    {
+      "title": "PolyG2G: A novel machine learning algorithm applied to the generative design of polymer dielectrics",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C2Leh-oAAAAJ&citation_for_view=C2Leh-oAAAAJ:2osOgNQ5qMEC",
+      "citation_id": "C2Leh-oAAAAJ:2osOgNQ5qMEC",
+      "authors": "R Gurnani, D Kamal, H Tran, H Sahu, K Scharm, U Ashraf, R Ramprasad",
+      "publication": "Chemistry of Materials 33 (17), 7008-7016, 2021",
+      "cited_by": {
+        "value": 104,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=14036782776330042070",
+        "serpapi_link": "https://serpapi.com/search.json?cites=14036782776330042070&engine=google_scholar&hl=en",
+        "cites_id": "14036782776330042070"
+      },
+      "year": "2021"
+    },
+    {
+      "title": "Gas permeability, diffusivity, and solubility in polymers: Simulation-experiment data fusion and multi-task machine learning",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C2Leh-oAAAAJ&citation_for_view=C2Leh-oAAAAJ:ufrVoPGSRksC",
+      "citation_id": "C2Leh-oAAAAJ:ufrVoPGSRksC",
+      "authors": "BK Phan, KH Shen, R Gurnani, H Tran, R Lively, R Ramprasad",
+      "publication": "npj Computational Materials 10 (1), 186, 2024",
+      "cited_by": {
+        "value": 83,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8475336118631664757",
+        "serpapi_link": "https://serpapi.com/search.json?cites=8475336118631664757&engine=google_scholar&hl=en",
+        "cites_id": "8475336118631664757"
+      },
+      "year": "2024"
+    },
+    {
+      "title": "Interpretable machine learning-based predictions of methane uptake isotherms in metal–organic frameworks",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C2Leh-oAAAAJ&citation_for_view=C2Leh-oAAAAJ:u-x6o8ySG0sC",
+      "citation_id": "C2Leh-oAAAAJ:u-x6o8ySG0sC",
+      "authors": "R Gurnani, Z Yu, C Kim, DS Sholl, R Ramprasad",
+      "publication": "Chemistry of Materials 33 (10), 3543-3552, 2021",
+      "cited_by": {
+        "value": 72,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7843083604653967147",
+        "serpapi_link": "https://serpapi.com/search.json?cites=7843083604653967147&engine=google_scholar&hl=en",
+        "cites_id": "7843083604653967147"
+      },
+      "year": "2021"
+    },
+    {
+      "title": "Pendant group functionalization of cyclic olefin for high temperature and high‐density energy storage",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C2Leh-oAAAAJ&citation_for_view=C2Leh-oAAAAJ:eQOLeE2rZwMC",
+      "citation_id": "C2Leh-oAAAAJ:eQOLeE2rZwMC",
+      "authors": "S Shukla, C Wu, A Mishra, J Pan, AP Charnay, A Khomane, A Deshmukh, ...",
+      "publication": "Advanced Materials 36 (52), 2402133, 2024",
+      "cited_by": {
+        "value": 55,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=4509195218812914399",
+        "serpapi_link": "https://serpapi.com/search.json?cites=4509195218812914399&engine=google_scholar&hl=en",
+        "cites_id": "4509195218812914399"
+      },
+      "year": "2024"
+    },
+    {
+      "title": "A physics-enforced neural network to predict polymer melt viscosity",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C2Leh-oAAAAJ&citation_for_view=C2Leh-oAAAAJ:roLk4NBRz8UC",
+      "citation_id": "C2Leh-oAAAAJ:roLk4NBRz8UC",
+      "authors": "A Jain, R Gurnani, A Rajan, HJ Qi, R Ramprasad",
+      "publication": "npj Computational Materials 11 (1), 42, 2025",
+      "cited_by": {
+        "value": 39,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9480125690008132158",
+        "serpapi_link": "https://serpapi.com/search.json?cites=9480125690008132158&engine=google_scholar&hl=en",
+        "cites_id": "9480125690008132158"
+      },
+      "year": "2025"
+    },
+    {
+      "title": "Rationally designed high-temperature polymer dielectrics for capacitive energy storage: An experimental and computational alliance",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C2Leh-oAAAAJ&citation_for_view=C2Leh-oAAAAJ:hqOjcs7Dif8C",
+      "citation_id": "C2Leh-oAAAAJ:hqOjcs7Dif8C",
+      "authors": "PS Aklujkar, R Gurnani, P Rout, AR Khomane, I Mutegi, M Desai, ...",
+      "publication": "Progress in Polymer Science 161, 101931, 2025",
+      "cited_by": {
+        "value": 39,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5636603879945835488",
+        "serpapi_link": "https://serpapi.com/search.json?cites=5636603879945835488&engine=google_scholar&hl=en",
+        "cites_id": "5636603879945835488"
+      },
+      "year": "2025"
+    },
+    {
+      "title": "Stereoisomerism of Vicinal Polydichloronorbornene for Ultra‐High‐Temperature Capacitive Energy Storage",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C2Leh-oAAAAJ&citation_for_view=C2Leh-oAAAAJ:0EnyYjriUFMC",
+      "citation_id": "C2Leh-oAAAAJ:0EnyYjriUFMC",
+      "authors": "J Hao, S Shukla, R Gurnani, M Mukherjee, H Sahu, A Khomane, ...",
+      "publication": "Advanced Materials 37 (15), 2417625, 2025",
+      "cited_by": {
+        "value": 38,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6097009610632142437",
+        "serpapi_link": "https://serpapi.com/search.json?cites=6097009610632142437&engine=google_scholar&hl=en",
+        "cites_id": "6097009610632142437"
+      },
+      "year": "2025"
+    },
+    {
+      "title": "Effect of fluorine in redesigning energy-storage properties of high-temperature dielectric polymers",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C2Leh-oAAAAJ&citation_for_view=C2Leh-oAAAAJ:YsMSGLbcyi4C",
+      "citation_id": "C2Leh-oAAAAJ:YsMSGLbcyi4C",
+      "authors": "AA Deshmukh, C Wu, O Yassin, L Chen, S Shukla, J Zhou, AR Khomane, ...",
+      "publication": "ACS Applied Materials & Interfaces 15 (40), 46840-46848, 2023",
+      "cited_by": {
+        "value": 34,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=14054034118819062361",
+        "serpapi_link": "https://serpapi.com/search.json?cites=14054034118819062361&engine=google_scholar&hl=en",
+        "cites_id": "14054034118819062361"
+      },
+      "year": "2023"
+    },
+    {
+      "title": "Advancement of optical methods in Experimental Mechanics",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C2Leh-oAAAAJ&citation_for_view=C2Leh-oAAAAJ:qjMakFHDy7sC",
+      "citation_id": "C2Leh-oAAAAJ:qjMakFHDy7sC",
+      "authors": "J Cantrell, S Rohde, D Damiani, R Gurnani, L DiSandro, J Anton, A Young, ...",
+      "publication": "Proceedings of the 2016 Annual Conference on Experimental and Applied …, 2017",
+      "cited_by": {
+        "value": 30,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=14712335966014729835",
+        "serpapi_link": "https://serpapi.com/search.json?cites=14712335966014729835&engine=google_scholar&hl=en",
+        "cites_id": "14712335966014729835"
+      },
+      "year": "2017"
+    },
+    {
+      "title": "Polymer composites informatics for flammability, thermal, mechanical and electrical property predictions",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C2Leh-oAAAAJ&citation_for_view=C2Leh-oAAAAJ:Se3iqnhoufwC",
+      "citation_id": "C2Leh-oAAAAJ:Se3iqnhoufwC",
+      "authors": "H Tran, C Kim, R Gurnani, O Hvidsten, J DeSimpliciis, R Ramprasad, ...",
+      "publication": "Polymer Chemistry 16 (30), 3459-3467, 2025",
+      "cited_by": {
+        "value": 22,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=17675597374986518823",
+        "serpapi_link": "https://serpapi.com/search.json?cites=17675597374986518823&engine=google_scholar&hl=en",
+        "cites_id": "17675597374986518823"
+      },
+      "year": "2025"
+    },
+    {
+      "title": "P. Ifju Experimental characterization of the mechanical properties of 3D printed ABS and polycarbonate parts S. Yoshida, L. Lamberti, C. Sciammarella (Eds.), Advancement of …",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C2Leh-oAAAAJ&citation_for_view=C2Leh-oAAAAJ:d1gkVwhDpl0C",
+      "citation_id": "C2Leh-oAAAAJ:d1gkVwhDpl0C",
+      "authors": "J Cantrell, S Rohde, D Damiani, R Gurnani, L DiSandro, J Anton, A Young, ...",
+      "publication": "Springer, Cham, 2017",
+      "cited_by": {
+        "value": 9,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8985948352939366864",
+        "serpapi_link": "https://serpapi.com/search.json?cites=8985948352939366864&engine=google_scholar&hl=en",
+        "cites_id": "8985948352939366864"
+      },
+      "year": "2017"
+    },
+    {
+      "title": "Identifying High-Performance Metal–Organic Frameworks for Low-Temperature Oxygen Recovery from Helium by Computational Screening",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C2Leh-oAAAAJ&citation_for_view=C2Leh-oAAAAJ:Y0pCki6q_DkC",
+      "citation_id": "C2Leh-oAAAAJ:Y0pCki6q_DkC",
+      "authors": "S Jamdade, R Gurnani, H Fang, SE Boulfelfel, R Ramprasad, DS Sholl",
+      "publication": "Industrial & Engineering Chemistry Research 62 (4), 1927-1935, 2023",
+      "cited_by": {
+        "value": 8,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8764160498762629809",
+        "serpapi_link": "https://serpapi.com/search.json?cites=8764160498762629809&engine=google_scholar&hl=en",
+        "cites_id": "8764160498762629809"
+      },
+      "year": "2023"
+    },
+    {
+      "title": "& Ifju, PG (2017). Experimental characterization of the mechanical properties of 3D-printed ABS and polycarbonate parts",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C2Leh-oAAAAJ&citation_for_view=C2Leh-oAAAAJ:8k81kl-MbHgC",
+      "citation_id": "C2Leh-oAAAAJ:8k81kl-MbHgC",
+      "authors": "JT Cantrell, S Rohde, D Damiani, R Gurnani, L DiSandro, J Anton",
+      "publication": "Rapid Prototyping Journal, 811-824, 0",
+      "cited_by": {
+        "value": 3,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2837449780506744038",
+        "serpapi_link": "https://serpapi.com/search.json?cites=2837449780506744038&engine=google_scholar&hl=en",
+        "cites_id": "2837449780506744038"
+      },
+      "year": ""
+    },
+    {
+      "title": "Stalking the Synthetically-Accessible Polymer Universe with RxnChainer: Digital Synthesis, Retrosynthesis and Beyond",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=C2Leh-oAAAAJ&citation_for_view=C2Leh-oAAAAJ:_kc_bZDykSQC",
+      "citation_id": "C2Leh-oAAAAJ:_kc_bZDykSQC",
+      "authors": "SS Shukla, R Gurnani, C Kim, R Ramprasad, A Mahmood",
+      "publication": "Preprints, 2026",
+      "cited_by": {
+        "value": 2,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=538834564105068809",
+        "serpapi_link": "https://serpapi.com/search.json?cites=538834564105068809&engine=google_scholar&hl=en",
+        "cites_id": "538834564105068809"
+      },
+      "year": "2026"
+    }
+  ],
+  "cited_by": {
+    "table": [
+      {
+        "citations": {
+          "all": 2511,
+          "since_2021": 2146
+        }
+      },
+      {
+        "h_index": {
+          "all": 16,
+          "since_2021": 15
+        }
+      },
+      {
+        "i10_index": {
+          "all": 16,
+          "since_2021": 15
+        }
+      }
+    ],
+    "graph": [
+      {
+        "year": 2017,
+        "citations": 33
+      },
+      {
+        "year": 2018,
+        "citations": 77
+      },
+      {
+        "year": 2019,
+        "citations": 117
+      },
+      {
+        "year": 2020,
+        "citations": 116
+      },
+      {
+        "year": 2021,
+        "citations": 203
+      },
+      {
+        "year": 2022,
+        "citations": 183
+      },
+      {
+        "year": 2023,
+        "citations": 240
+      },
+      {
+        "year": 2024,
+        "citations": 218
+      },
+      {
+        "year": 2025,
+        "citations": 495
+      },
+      {
+        "year": 2026,
+        "citations": 795
+      }
+    ]
+  },
+  "public_access": {
+    "link": "https://scholar.google.com/citations?view_op=list_mandates&hl=en&user=C2Leh-oAAAAJ",
+    "available": 12,
+    "not_available": 2
+  },
+  "serpapi_pagination": {
+    "next": "https://serpapi.com/search.json?author_id=C2Leh-oAAAAJ&engine=google_scholar_author&hl=en&start=20"
+  }
+}
